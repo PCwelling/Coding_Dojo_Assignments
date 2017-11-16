@@ -1,0 +1,111 @@
+~/Desktop $ mkdir gittest
+~/Desktop $ cd gittest
+~/D/gittest $ git init
+Initialized empty Git repository in /Users/paulcwelling/Desktop/gittest/.git/
+~/D/gittest master ✔ touch index.html
+~/D/gittest master ✖ touch styles.css
+~/D/gittest master ✖ touch aboutMe.txt
+~/D/gittest master ✖ git commit -m "added three files"
+On branch master
+
+Initial commit
+
+Untracked files:
+	aboutMe.txt
+	index.html
+	styles.css
+
+nothing added to commit but untracked files present
+~/D/gittest master ✖ open aboutMe.txt
+~/D/gittest master ✖ git commit -m "updated aboutMe"
+On branch master
+
+Initial commit
+
+Untracked files:
+	aboutMe.txt
+	index.html
+	styles.css
+
+nothing added to commit but untracked files present
+~/D/gittest master ✖ git add aboutMe.txt
+~/D/gittest master ✖ git stautus
+git: 'stautus' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
+~/D/gittest master ✖ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   aboutMe.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	index.html
+	styles.css
+
+~/D/gittest master ✖ git commit -m "updated aboutMe"
+[master (root-commit) 65d6d3a] updated aboutMe
+ 1 file changed, 1 insertion(+)
+ create mode 100644 aboutMe.txt
+~/D/gittest master ✖ git add aboutMe.txt
+~/D/gittest master ✖ git commit -m "added favorite movie to aboutMe"
+[master 7b5dff7] added favorite movie to aboutMe
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+~/D/gittest master ✖ git log
+commit 7b5dff77d4ebd0cb79f0a0ea14be0315ac27f4d5 (HEAD -> master)
+Author: PCWelling <paul@epicureandiving.com>
+Date:   Tue Oct 17 00:19:36 2017 -0700
+
+    added favorite movie to aboutMe
+
+commit 65d6d3a201b3e7e5ec5d2b9b068d115b2a6aabbc
+Author: PCWelling <paul@epicureandiving.com>
+Date:   Tue Oct 17 00:17:15 2017 -0700
+
+    updated aboutMe
+~/D/gittest master ✖ git revert
+usage: git revert [<options>] <commit-ish>...
+   or: git revert <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add Signed-off-by:
+    -m, --mainline <parent-number>
+                          select mainline parent
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+~/D/gittest master ✖ git log
+commit 7b5dff77d4ebd0cb79f0a0ea14be0315ac27f4d5 (HEAD -> master)
+Author: PCWelling <paul@epicureandiving.com>
+Date:   Tue Oct 17 00:19:36 2017 -0700
+
+    added favorite movie to aboutMe
+
+commit 65d6d3a201b3e7e5ec5d2b9b068d115b2a6aabbc
+Author: PCWelling <paul@epicureandiving.com>
+Date:   Tue Oct 17 00:17:15 2017 -0700
+
+    updated aboutMe
+~/D/gittest master ✖ git revert -n HEAD
+~/D/gittest master ✖ open aboutMe.txt
+~/D/gittest master ✖ git add aboutMe.txt
+~/D/gittest master ✖ git commit -m "added favorite book"
+[master 3af7457] added favorite book
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+~/D/gittest master ✖ 

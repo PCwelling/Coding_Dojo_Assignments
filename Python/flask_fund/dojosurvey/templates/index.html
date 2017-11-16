@@ -1,0 +1,33 @@
+<html>
+    <head>
+       <title>Dojo Survey Index</title>
+    </head>
+    <body>
+      <h3>Take the survey.</h3>
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+      <form action='/results' method='post'>
+          Name: <input type='text' name='name'>
+
+          <p>Dojo Location:</p>
+          <select name='location'>
+              <option value="Seattle">Seattle</option>
+              <option value="Chicago">Chicago</option>
+              <option vale="Tulsa">Tulsa</option>
+          </select>
+
+          <p>Favorite Language</p>
+          <select name = "language">
+              <option value="python">Python</option>
+              <option value="javascript">Java</option>
+              <option vale="csharp">C#</option>
+              <option valu="iOs">iOs</option>
+          </select>
+
+          <p>Comment (optional)</p> 
+          <textarea name="comment"></textarea>
+          
+          <input type='submit' value='Submit your survey'>
+      </form>
+    </body>
+</html>
+

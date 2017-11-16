@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#wrapper{
+    background-color: gray;
+    height: 650px;
+    border: 10px solid black;
+}
+.arenaselect{
+    height: 250px;
+    width: 400px;
+    margin: 100px;
+}
+.arenaselect button{
+height: 40px;
+width: 60px;
+border-radius: 5px;
+margin: 25px;
+}
+.arenaselect h1{
+    color: orange;
+    text-align: center;
+}
+.playerselect{
+    display: none;
+    height: 250px;
+    width: 400px;
+    margin: 100px
+}

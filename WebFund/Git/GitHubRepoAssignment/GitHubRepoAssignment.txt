@@ -1,0 +1,38 @@
+~/Desktop master ✖ cd GitHubRepoAssignment/
+~/D/GitHubRepoAssignment master ✖ git init
+Initialized empty Git repository in /Users/paulcwelling/Desktop/GitHubRepoAssignment/.git/
+~/D/GitHubRepoAssignment master ✔ touch readme.md
+~/D/GitHubRepoAssignment master ✖ git stauts
+git: 'stauts' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
+~/D/GitHubRepoAssignment master ✖ git add readme.md
+~/D/GitHubRepoAssignment master ✖ git commit .
+subl -w: subl: command not found
+error: There was a problem with the editor 'subl -w'.
+Please supply the message using either -m or -F option.
+~/D/GitHubRepoAssignment master ✖ git commit -m "added readme.md"
+[master (root-commit) 53c394c] added readme.md
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 readme.md
+~/D/GitHubRepoAssignment master ✔ 
+git remote add origin https://github.com/PCwelling/GitHubRepoAssignment.git
+~/D/GitHubRepoAssignment master ✔ git push -u origin master
+Username for 'https://github.com': git status
+Password for 'https://git status@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/PCwelling/GitHubRepoAssignment.git/'
+~/D/GitHubRepoAssignment master ✔ 
+git remote add origin https://github.com/PCwelling/GitHubRepoAssignment.git
+fatal: remote origin already exists.
+~/D/GitHubRepoAssignment master ✔ git push -u origin master
+Username for 'https://github.com': paul@epicureandiving.com
+Password for 'https://paul@epicureandiving.com@github.com': 
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 219 bytes | 219.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/PCwelling/GitHubRepoAssignment.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+~/D/GitHubRepoAssignment master ✔ 

@@ -1,0 +1,17 @@
+pip install Django - installs Django
+
+pip list - lists installed packages in case insensitive sorted order, including editables 
+
+pip install Django - requirement already satisfied
+
+pip freeze - output installed packages in a case-insensitive sorted order in requirements format.
+		a requirements.txt document was added to the desktop
+
+pip uninstall Django - uninstalled Django
+
+pip show Django - nothing happened
+
+pip search flask - generates a search through the database of packages with the term Flask in it.
+
+
+

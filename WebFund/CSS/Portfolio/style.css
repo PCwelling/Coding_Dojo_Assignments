@@ -1,0 +1,99 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#wrapper{
+    width: 970px;
+    background: radial-gradient(rgba(160, 54, 153, 0.76), rgba(32, 4, 32, 0.651));
+    padding: 15px;
+}
+#header{
+    height: 35px;
+    background-color: rgba(228, 228, 228, 0.61);
+    padding: 10px;
+    margin: -20px;
+    margin-bottom: 15px;
+}
+#name{
+    display: inline-block;
+    width: 485px;
+}
+#title{
+    display: inline-block;
+    text-align: right;
+    width: 400px;
+}
+#portrait{
+    width: 450px;
+    height: auto;
+    background-color: silver;
+    padding: 10px;
+    display: inline-block;
+}
+#about{
+    display: inline-block;
+    background-color:wheat;
+    width: 450px;
+    vertical-align: top;
+    margin-left: 15px;
+    padding: 15px;
+}
+#aboutword{
+    color: white;
+    background-color: grey;
+    height: 40px;
+    margin: -15px;
+    padding: 10px; 
+}
+.panels{
+    display: inline-block;
+    width: 275px;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    vertical-align: top;
+    margin-bottom: 25px;
+    height: 500px;
+}
+.titles{
+    color: white;
+    background-color: rgb(114, 107, 107);
+    margin: -10px;
+    height: 30px;
+}
+.midsizepics{
+height: 125px;
+margin: 10px;
+}
+.panelpara{
+    height:150px;
+    padding: 10px;
+}
+.technologies{
+    color: white;
+    background-color: rgb(114, 107, 107);
+    margin: -10px;
+    height: 30px;
+    margin-bottom: 20px;    
+}
+.icons{
+    display:inline-block;
+    width: 30px;
+    margin: 10px;
+}
+.buttons{
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px;
+}
+.footer{
+    background-color: silver;
+    margin: -15px;
+    height: 60px;
+    text-align: center;
+}
+.footer ul li{
+    display: inline-block;
+}

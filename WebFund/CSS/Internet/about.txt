@@ -1,0 +1,1 @@
+This is the project before the belt test for html/css fundamentals at Coding Dojo.  

@@ -1,0 +1,110 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#wrapper{
+    width: 970px;
+    background-color: white
+}
+.topnav{
+display: inline-block;
+background-color: silver;
+width: 970px;
+margin-bottom: 10px;
+border-radius: 5px;
+}
+.topnav img{
+    display: inline-block;
+    height: 50px;
+}
+.topnav ul{
+    display: inline-block;
+}
+.topnav ul li{    
+    display: inline-block;
+    list-style: none;
+    text-align-last: center;
+    margin-left: 25px;
+}
+.topnav input{
+    margin-left: 275px;
+    padding: 5px;
+}
+.topnav button{
+    margin: -5px;
+}
+.mainimg img{
+    width: 970px;
+}
+.mainimg ul{
+    background-color: rgb(53, 55, 58);
+    margin-top: -5px;
+    height: 40px;
+}
+.mainimg ul li{
+    list-style: none;
+    display: inline-block;
+    color: rgb(146, 146, 233);
+    margin-left: 15px;
+    padding: 2px;
+}
+.disc{
+    border: 1px solid gray;
+    height: 50px;
+    width: 970;
+    margin-top: 10px;
+}
+.disc H1{
+    display: inline-block;
+}
+.disc button{
+    display: inline-block;
+    background-color: rgb(15, 145, 219);
+    color: white;
+    height: 30px;
+    width: 200px;
+    margin-left: 200px;
+}
+.indpan{
+    width: 215px;
+    height: 300px;
+    padding: 10px;
+    display: inline-block;
+    border: 2px solid rgb(148, 140, 140);
+    vertical-align: top;
+    padding: 10px;
+}
+.icons{
+    width:30px;
+    height: 30px;
+    display: inline-block;
+}
+.indpan h3{
+    display: inline-block;
+    margin: 10px
+}
+.panimg{
+    height: 125px;
+    margin: 15 px;  
+}
+.indpan p{
+    height: 75px;
+}
+.indpan button{
+    background-color: rgb(12, 175, 240);
+    color: white;
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 30px;
+}
+.botnav ul{
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 155px;
+    margin-top: 40px;
+}
+.footer ul li{
+    display: inline-block;
+}

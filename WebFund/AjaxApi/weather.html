@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Forcast</title>
+    <link rel="stylesheet" href="weather.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>console.log($)</script>
+    <script>
+        $(document).ready(function() {
+            
+            $('#form_1').submit(function() {
+                var city = $('#search').val();
+
+                $.get("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&&APPID=5985f455f20d40ec03d9c67ecb6fbc67", function(res) {
+                console.log(res);
+
+                    var html_str = "";
+                    html_str += "<h1>" + res.name + "</h1>";
+                    html_str += "<h2>" + res.main.temp + "degrees</h2>";
+                    $('#results').html(html_str);
+                }, 'json');
+
+                return false;
+            });
+
+        });
+
+    </script> 
+</head>
+<body>
+    <div id="wrapper">
+            <form id="form_1">
+                <input type="text" name="search" id="search" value="">
+                <button type='submit' id='click'>Search Weather</button>
+            </form> 
+    <div id='results'></div>
+    </div>
+    
+</body>
+</html>

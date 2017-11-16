@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static'login/static/style.css' %}">
+    <title>Login and Registration</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="regform">
+            <h2>Registration</h2>
+            <form action="/register" method="post">
+                {% crsf_token%}
+                <p>First Name:</p>
+                <input type="text" name="f_name" id="f_name">
+                <p>Last Name:</p>
+                <input type="text" name="l_name" id="l_name">
+                <p>Email Address:</p>
+                <input type="email" name="email" id="email">
+                <p>Password:</p>
+                <input type="password" name="pw" id="password">
+                <p>Confirm Password:</p>
+                <input type="password" name="confpw" id="confpw">
+                <input type="submit" value="Register">
+            </form>
+        </div>
+        <div class="logform">
+            <h2>Login</h2>
+            <form action="/login" method="post">
+                {% crsf_token%}
+                <p>Email Address:</p>
+                <input type="email" name="email" id="email">
+                <p>Password:</p>
+                <input type="password" name="pw" id="password">
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery Practice</title>
+        <script src="jQuery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#disappear").click(function(){
+                    $("#disappear p").hide()
+                })
+                $("#but1").click(function(){
+                    $("#hideshow p").hide()
+                })
+                $("#but2").click(function(){
+                    $("#hideshow p").show()
+                })
+                $("#togglebutton").click(function(){
+                    $("#toggle p").toggle()
+                })
+                $("#slideup").click(function(){
+                    $("#slidearound p").slideUp()
+                })
+                $("#slidedown").click(function(){
+                    $("#slidearound p").slideDown()
+                })
+                $("#toggleslide").click(function(){
+                    $("#slidetoggle p").slideToggle()
+                })
+                $("#classbutton").click(function(){
+                    $("#addclass p").addClass("class")
+                })
+                $("#beforebutton").click(function(){
+                    $("#before p").before("<p>chicken</p>")
+                })
+                $("#afterbutton").click(function(){
+                    $("#after p").after("<p>egg</p>")
+                })
+                $("#appendbutton").click(function(){
+                    $("#append").append("egg")
+                })
+                $("#htmlbutton").click(function(){
+                    $("#htmlchange p").html("<h1>what's up</h1>")
+                })
+
+            })
+        </script>
+        <style>
+            .red{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="disappear">
+            <button>Click Me!</button>
+            <p>Make me disappear!</p>
+        </div>
+        <div id="hideshow">
+            <button id="but1">Click to hide</button>
+            <button id="but2">Click to show</button>
+            <p>Make me disappear / reappear!</p>
+        </div>
+        <div id="toggle">
+            <button id="togglebutton">Click to toggle</button>
+            <p>Toggle me on / off</p>
+        </div>
+        <div id="slidearound">
+            <button id="slideup">Click to slide up</button>
+            <button id="slidedown">Click to slide down</button>
+            <p>Make me slide!</p>
+        </div>
+        <div id="slidetoggle">
+            <button id="toggleslide">Click to toggle</button>
+            <p>Slide Toggle</p>
+        </div>
+        <div id="addclass">
+            <button id="classbutton">Make the text class red</button>
+            <p>Add some class</p>
+            <p>Add some class</p>
+            <p>Add some class</p>
+        </div>
+        <div id="before">
+            <button id="beforebutton">Click for before</button>
+            <p>Tell me what came first!</p>
+        </div>
+        <div id="after">
+            <button id="afterbutton">Click for after</button>
+            <p>Take me what came last!</p>
+        </div> <div id="append">
+            <button id="appendbutton">Click for appending</button>
+            <p>Make a new paragraph!</p>
+        </div>
+    </div> <div id="htmlchange">
+        <button id="htmlbutton">Click for htmling</button>
+        <p>Make me into something different!</p>
+    </div>
+</body>
+</html>

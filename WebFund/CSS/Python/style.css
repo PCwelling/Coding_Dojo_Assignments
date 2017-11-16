@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#wrapper{
+    width: 970px;
+    background-color: #245176;
+}
+#icon{
+    width: 450px;
+}
+#rightside{
+    margin-left: 240px;
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
+}
+#sbtext{
+    color:white;
+    margin: 5px 20px;
+    vertical-align: top;
+}
+#searchbox{
+    background-color: rgb(46, 43, 43);
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 5px 5px 5px black;
+    height: 35px;
+    width: 225px;
+}
+#sb{
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    height: 5px;
+    text-align: center;
+}
+#go{
+    background-color: blue;
+    color: white;
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+}
+.navbar{
+    background-color: #3e79ad;
+    list-style: none;
+    height: 50px;
+    border-radius: 5px;
+    margin: 20px;
+}
+.navbar ul li{
+    display: inline-block;
+    color: white;
+    margin: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+.navbar p{
+    margin-left: 40px;
+}
+#sidenav{
+    color: white;
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    list-style-position: inside;
+}
+.info{
+    display: inline-block;
+    vertical-align: top;
+    width: 600px; 
+}
+.info p{
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+.info ul li{
+    color: yellow;
+    text-align: center;
+    list-style: none;
+    font-style: oblique;
+    font-size: 15px;
+    list-style:  none;
+}
+.panbg{
+    background-color: white;
+    width: 970px;
+    height: 300px;
+    justify-content: center;
+    margin: 20px;
+}
+.panels{
+    display: inline-block;
+    width: 350px;
+    vertical-align: top;
+    padding: 20px;
+    text-align: center;
+    height: 200px;
+    border-top: 5px solid blue;
+    margin: 15px;
+}
+.panels ul li{
+    color: blue;
+}
+.footer{
+    background-color: #245176;
+    color: white;
+    text-align: center;
+    height: 50px;
+    padding: 25px;
+    margin-left: 40px;
+}
+.footer ul li{
+    display: inline-block;
+    margin: 15px;
+}

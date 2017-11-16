@@ -1,0 +1,10 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.regform{
+    display: inline-block;
+}
+.logform{
+    display: inline-block;
+}

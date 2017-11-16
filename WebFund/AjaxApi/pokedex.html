@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="pokedexstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>console.log($)</script>
+    <script>
+        $(document).ready(function(){
+    
+            function getpokemon(){
+                var imgstring = "";
+                for(i=1; i<152; i++){
+                imgstring += "<img num ='"+[i]+"'src='http://pokeapi.co/media/img/"+[i]+".png'>"
+                }
+                return(imgstring)
+            }
+
+            $('#pokeselect').append(getpokemon())
+
+            $(this).on('click','img', function(){
+                var temp= $(this).attr("num");
+                $.get("http://pokeapi.co/api/v2/pokemon" + temp + "/", function(){
+                })
+                console.log(temp);
+            })
+            
+            $(this).click(function(){
+            console.log($(this).attr("src"));   
+            }) 
+
+
+
+
+            
+
+        });
+    </script> 
+</head>
+<body>
+    <div id="wrapper">
+        <div id="pokeselect">
+            <h3>Select a Pokemon</h3>      
+        </div>        
+        <div id="pokedex">
+            <h3>Pokedex</h3>
+        </div>
+
+        </div>        
+    </div>
+
+    
+</body>
+</html>

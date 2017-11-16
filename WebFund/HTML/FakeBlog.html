@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+        <meta charset="utf-8">
+        <title>My Fake Blog</title>
+        <meta name="description" content="this page is about scuba diving in the Puget Sound">
+   </head>
+   <body>    
+      <div id="header">
+         <h1>Fake Scuba Blog</h1>
+         <img src="cozumel_scuba.jpg " alt="Scuba Diver" style="width:304px;height:228px;">
+         <p> Scuba Diving is a great activity especialy here in the Puget Sound.
+             People need to be certified to go scuba diving. One of the many certification
+             agencies is PADI</p>
+         <a href="http://www.padi.com">Click for the PADI webpage </a>
+      </div>
+      <div id="equipment">
+            <h3>Scuba Equipment</h3>
+            <p>Scuba Diving is an equipment intensive sport. You will need the following equipment:</p>
+                 <ul>
+                     <li>Mask</li>
+                     <li>Fins</li>
+                     <li>Regulator</li>
+                     <li>Buoyancy Control Device (BCD)</li>
+                     <li>Scuba Tanks</li>
+                </ul>
+      </div>
+      <div id="physics">
+          <h3>Diving Physics</h3>
+          <p> Diving involes certain physics principles. One of the most important is
+             the relationship between pressure, volume, and density related to depth.</p>
+       <table>
+           <thead>
+              <tr>
+                  <th>Depth</th>
+                  <th>Pressure</th>
+                  <th>Volume</th>
+                  <th>Density</th>
+              </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td>0 Feet</td>
+                   <td>1 ATA</td>
+                   <td>1</td>
+                   <td>x1</td>
+               </tr>
+               <tr>
+                   <td>33 Feet</td>
+                   <td>2 ATA</td>
+                   <td>1/2</td>
+                   <td>x2</td>
+               </tr>
+               <tr>
+                   <td>66 Feet</td>
+                   <td> 3 ATA</td>
+                   <td>1/3</td>
+                   <td>x3</td>
+               </tr>
+           </tbody>
+        </table>
+      </div>
+      <div id="survey">
+        <h3>Please provide some information for us.</h3>
+        <form action="process.php">
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" id="first_name">
+                <br>    
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name">
+                <br>
+                <label for="email">EMAIL</label>
+                <input type="email" name="email" id="email">
+                <br>
+                <p> Would you like more information on diving in the Puget Sound?</p>
+                <label for="yesmore">Yes</label>
+                <input type="radio" name="yesmore" id="yesmore">
+                <br>
+                <label for="nomore">No</label>
+                <input type="radio" name="nomore" id="nomore">
+                <br>
+                <p>How did you hear about us?</p>
+                <label for="facebook">Facebook</label>
+                <input type="checkbox" id="facebook" name="hear" value="facebook">
+                <label for="divestore">Scuba Shop</label>
+                <input type="checkbox" id="divestore" name="hear" value="divestore">
+                <label for="referral">Referral</label>
+                <input type="checkbox" id="referral" name="hear" value="referral">
+                <br>
+                 <input type="submit" value="submit">
+        </form>
+      </div>
+
+   </body>
+</html>

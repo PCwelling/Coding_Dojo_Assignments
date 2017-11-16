@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Arena</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>console.log($)</script>
+    <script>
+        $(document).ready(function(){
+            
+            $('#bebut').hover(function(){
+                $("#wrapper").css('background-image', 'url(beach.jpg)')} ,
+                 function(){$('#wrapper').css('background-image', 'none')})
+            
+            $('#dobut').hover(function(){
+                $("#wrapper").css('background-image', 'url(dojo.jpg)')},
+                function(){$('#wrapper').css('background-image', 'none')})
+            
+            $('#eabut').hover(function(){
+                $("#wrapper").css('background-image', 'url(earth.jpg)')}, 
+                function(){$('#wrapper').css('background-image', 'none')})
+            
+            $('#fobut').hover(function(){
+                $("#wrapper").css('background-image', 'url(forest.jpg)')}, 
+                function(){$('#wrapper').css('background-image', 'none')})            
+            
+            $('#mabut').hover(function(){
+                $("#wrapper").css('background-image', 'url(matrix.jpg)')}, 
+                function(){$('#wrapper').css('background-image', 'none')})
+
+            $('#snbut').hover(function(){
+                $("#wrapper").css('background-image', 'url(snow.jpg)') }, 
+                function(){$('#wrapper').css('background-image', 'none')})
+
+            $('#bebut').click(function(){
+                $(".arenaselect").html('')
+                $('#playerselect').show()
+            })
+            
+            $('#dobut').click(function(){
+                $(".arenaselect").html('')         
+                $('.playerselect').show()
+            })
+            
+            $('#eabut').click(function(){
+                $(".arenaselect").html('')         
+                $('.playerselect').show()    
+            })
+            
+            $('#fobut').click(function(){
+                $(".arenaselect").html('')           
+                $('.playerselect').show()   
+            })            
+            
+            $('#mabut').click(function(){
+                $(".arenaselect").html('')         
+                $('.playerselect').show()    
+            })            
+            
+            $('#snbut').click(function(){
+                $(".arenaselect").html('')          
+                $('.playerselect').show()  
+            })
+        });
+    </script> 
+</head>
+<body>
+    <div id="wrapper">
+        <div class="arenaselect">
+            <H1>Select your Arena</H1>
+            <button id='bebut'>Beach</button>
+            <button id='dobut'>Dojo</button>
+            <button id='eabut'>Earth</button>
+            <button id='fobut'>Forest</button>
+            <button id='mabut'>Matrix</button>
+            <button id='snbut'>Snow</button>
+        </div> 
+        <div class="playerselect">
+            <H1>Character Select</H1>
+            <select name="Player 1" id="Player 1">
+                <option value="Donny">Donny</option>
+                <option value="Leo">Leo</option>
+                <option value="Mikey">Mikey</option>
+                <option value="Raphael">Raphael</option>
+            </select>            
+            <select name="Player 2" id="Player 2">
+                <option value="Donny">Donny</option>
+                <option value="Leo">Leo</option>
+                <option value="Mikey">Mikey</option>
+                <option value="Raphael">Raphael</option>
+            </select>
+        </div>
+    </div>
+  
+</body>
+</html>

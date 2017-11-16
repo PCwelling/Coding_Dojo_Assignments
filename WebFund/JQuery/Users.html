@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>console.log($)</script>
+    <script>
+        $(document).ready(function () {
+
+            $('button').click(function () {
+                $('form').submit();
+            })
+
+            $('form').submit(function () {
+                var data = $(this).serializeArray();
+                
+                console.log(data);
+                
+                for(var i = 1; i < data.length + 1; i++){
+                    $('#mytable').children('th:nth-child('+i+')').append(' | ' + data[i-1].value + ' | ');
+                }
+                $('#mytable').children('th:nth-child('+i+1+')').append(' | ' + data[i].value + ' | ');
+                return false
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="userTable">
+        <table>
+            <thead>
+                <tr id="mytable">
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Contact #</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr></tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="userForm">
+        <H1>Add User</H1>
+        <form>
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first_name">
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last_name">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="phone">Contact No.</label>
+            <input type="phone" name="phone" id="phone">
+        </form>
+        <button>submit</button>
+    </div>
+</body>
+
+</html>

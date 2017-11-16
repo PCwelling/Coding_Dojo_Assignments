@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper{
+    background-color: aqua;
+}
+.gold{
+    height: 50px;
+    display: inline-block;
+}
+.locations{
+    display: inline-block;
+    height: 100px;
+    width: 200px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+.activities{
+    margin-top: 20px;
+    height: 50px;
+    width: 500px;
+    border: 2px solid black;
+}

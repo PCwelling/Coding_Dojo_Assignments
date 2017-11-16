@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#pokeselect{
+    display: inline-block;
+    height: 800px;
+    width: 800px;
+    vertical-align: top;
+    overflow-y: auto;
+    text-align: center;
+}
+#pokedex{
+    height: 700px;
+    width: 300px;
+    border: 10px solid red;
+    margin-left: 50px;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    text-align: center;
+}

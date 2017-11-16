@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Wall</title>
+</head>
+<body>
+    <h1>Welcome to the Wall, {{session["name"]}}, {{session["user_id"]}}!</h1>
+    <form action="/logout" method="post">
+      <input type="submit" value="Logout">
+    </form>
+    <br>
+    <form action="/msg" method="POST">
+        <textarea name="msg" id="msg" cols="100" rows="5"></textarea>
+        <input type="submit" value="Post a message">
+    </form>
+    <br>
+    <div class="wall">
+        {% for d in disp %}
+        <h4>{{d.first_name}} {{d.last_name}} {{d.created_at}} {{d.message_id}}</h4>
+        <p>{{d.message}}</p>
+        <div class = "comment">
+            {% for c in cdisp %}
+            {%if d.message_id == c.message_id%}   
+            <h6>{{c.first_name}} {{c.last_name}} {{c.created_at}}</h6>
+            <p>{{c.comment}}</p>
+            {%endif%}
+            {% endfor %}
+        </div>
+        <form action="/com" method="POST">
+            <textarea name="com" id="com" cols="75" rows="3"></textarea>
+            <input type="submit" value="Leave a coment">
+            <input type="hidden" name="message_id" value="{{d.message_id}}">
+        </form>
+        {% endfor %}
+    </div>
+</body>
+</html>
