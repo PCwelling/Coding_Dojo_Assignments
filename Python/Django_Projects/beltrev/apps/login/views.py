@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from .models import User
@@ -27,7 +26,7 @@ def login(request):
         return redirect('/')
     request.session['user_id'] = result.id
     messages.success(request, "Successfully logged in!")
-    return redirect('/success')
+    return redirect('/bookrev')
 
 def success(request):
     try:

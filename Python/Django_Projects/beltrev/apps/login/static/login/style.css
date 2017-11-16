@@ -10,4 +10,5 @@
 .logform{
     display: inline-block;
     vertical-align: top;
+    border: 2px solid black
 }
