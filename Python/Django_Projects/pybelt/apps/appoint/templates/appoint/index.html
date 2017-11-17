@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "appoint/style.css" %}">
+    <title>Appointments</title>
+</head>
+<body>
+    <h2>Hello {{user.first_name}}</h2>
+    <a href="">Logout</a>
+    <div class="current">
+        <p>Here are your appointments for today:  {{date}}</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for appointments in appointment %}
+                <tr>
+                    <td>{{ appontment.task }}</td>
+                    <td>{{ appointment.sime}}</td>
+                    <td>{{ appointment.status }}</td>
+                    <td><p><a href="/appoint/{{appointment.id}}/update">Edit</a> | <a href="/appoint/{{appointment.id}}/delete"> | Delete</a></p></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="upcoming">
+        <p>Your Other Appointments</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for appointments in appointment %}
+                <tr>
+                    <td>{{ appontment.task }}</td>
+                    <td>{{ appointment.date}}</td>
+                    <td>{{ appointment.time}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class = "add">
+        <h3>Add an appointment</h3>
+        <form action="appoint/create" method="post">
+            {% csrf_token %}
+            <p>Date</p>
+            <input type="date" name="date" id="date">
+            <p>Time</p>
+            <input type="time" name="time" id="time">
+            <p>Task</p>
+            <input type="text" name="task" id="task">
+            <input type="submit" value="Add">
+        </form>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.regform{
+    display: inline-block;
+    vertical-align: top;
+    border: 2px solid black;
+}
+.logform{
+    display: inline-block;
+    vertical-align: top;
+}
