@@ -9,10 +9,10 @@
     <title>Appointments</title>
 </head>
 <body>
-    <h2>Hello {{user.first_name}}</h2>
-    <a href="">Logout</a>
+    <h2>Hello {{first_name}}</h2>
+    <a href="/appoint/logout">Logout</a>
     <div class="current">
-        <p>Here are your appointments for today:  {{date}}</p>
+        <p>Here are your appointments for today:  {{today}}</p>
         <table>
             <thead>
                 <tr>
@@ -25,10 +25,11 @@
             <tbody>
                 {% for appointments in appointment %}
                 <tr>
-                    <td>{{ appontment.task }}</td>
-                    <td>{{ appointment.sime}}</td>
-                    <td>{{ appointment.status }}</td>
-                    <td><p><a href="/appoint/{{appointment.id}}/update">Edit</a> | <a href="/appoint/{{appointment.id}}/delete"> | Delete</a></p></td>
+                    <td>{{appointments.task}}</td>
+                    <td>{{appointments.time}}</td>
+                    <td>{{appointments.status}}</td>
+                    <td>{{appointments.id}}</td>
+                    <td><p><a href="{{appointments.id}}/edit">Edit</a> | <a href="{{appointments.id}}/delete"> | Delete</a></p></td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -47,9 +48,9 @@
             <tbody>
                 {% for appointments in appointment %}
                 <tr>
-                    <td>{{ appontment.task }}</td>
-                    <td>{{ appointment.date}}</td>
-                    <td>{{ appointment.time}}</td>
+                    <td>{{ appointments.task }}</td>
+                    <td>{{ appointments.date}}</td>
+                    <td>{{ appointments.time}}</td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -57,7 +58,7 @@
     </div>
     <div class = "add">
         <h3>Add an appointment</h3>
-        <form action="appoint/create" method="post">
+        <form action="create" method="post">
             {% csrf_token %}
             <p>Date</p>
             <input type="date" name="date" id="date">

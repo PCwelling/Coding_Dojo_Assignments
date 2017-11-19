@@ -1,7 +1,6 @@
 from __future__ import unicode_literals
 import re
 import bcrypt
-from datetime import datetime
 from django.db import models
 
 
@@ -64,7 +63,7 @@ class User(models.Model):
     first_name = models.CharField(max_length=255)
     email = models.EmailField(max_length=255)
     password = models.CharField(max_length=255)
-    dob = models.DateField(default = 0)
+    dob = models.DateField()
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
     objects = UserManager()

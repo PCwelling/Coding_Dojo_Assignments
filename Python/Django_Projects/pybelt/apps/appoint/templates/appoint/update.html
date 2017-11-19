@@ -9,21 +9,27 @@
     <title>Update an Appointment</title>
 </head>
 <body>
+    <h2>Update your appointment</h2>
+    <br>
+    <p><a href="/appoint">Dashboard</a> | <a href="/appoint/logout">Logout</a></p>
+    <br>
     <div>
-        <form action="/edit" method="post">
+        <form action="update" method="post">
             {% csrf_token%}
             <p>Task</p>
             <input type="text" name="task" id="task">
             <p>Status</p>
-            <section>
-                {% for status in status%}
-                <option value="{{status}}"></option>
-                {%end for%}
-            </section>
+                <select name="status" id="status">
+                    <option value="Done">Done</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Missed">Missed</option>
+                </select>
             <p>Date</p>
             <input type="date" name="date" id="date">
             <p>Time</p>
             <input type="time" name="time" id="time">
+            <br>
+            <br>
             <input type="submit" value="update">
         </form>
     </div>

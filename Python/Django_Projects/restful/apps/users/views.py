@@ -32,7 +32,7 @@ def edit(request, user_id):
   context = {
     'user': User.objects.get(id=user_id)
   }
-  return render(request, 'edit.html', context)
+  return render(request, 'update.html', context)
 
 
 def update(request, user_id):
