@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "login/style.css" %}">
+    <title>Quotes</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <p>{{message}}</p>
+            {% endfor%}
+        </div>
+        {% endif %} -->
+        <h2>Welcome, {{user_alias}}!</h2>
+        <a href="/logout">Logout</a>
+        <div class="quotes">
+            <h3>Quotable Quotes</h3>
+            {% for quotes in quote %}
+            <p>{{quote_by}}</p>
+            <p>{{quote}}</p>
+            <p>Posted by {{user.id}}</p>
+            <form action="/add" method="post">
+                {% csrf_token %}
+                <input type="submit" value="Add to My List">
+            </form>
+            {% endfor %}
+        </div>
+        <div class="favorites">
+            <h3>Your Favorites</h3>
+            {% for favorite in favorites%}
+            <p>{{quote_by}}</p>
+            <p>{{quote}}</p>
+            <form action="/remove" method="post">
+                {% csrf_token %}
+                <input type="submit" value="Remove to My List">
+            </form>
+            {% endfor %}
+        </div>
+        <div class="contribute">
+            <h3>Contribute a Quote</h3>
+            <form action="create" method="post">
+                {% csrf_token %}
+                <p>Quoted By:</p>
+                <input type="text" name="quote_by" id="quote_by">
+                <p>Alias:</p>
+                <input type="text" name="quote" id="quote">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>  
+</body>
+</html>

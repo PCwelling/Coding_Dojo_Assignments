@@ -4,11 +4,13 @@ from ..login.models import User
 from models import *
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from datetime import datetime
 
 # Create your views here.
 def index(request):
   context = {
-    "appointment" : Appointment.objects.all()
+    "appointment" : Appointment.objects.all(),
+    "today" : datetime.date
   }
   return render(request, 'appoint/index.html', context)
 

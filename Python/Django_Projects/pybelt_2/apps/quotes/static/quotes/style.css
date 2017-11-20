@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.quotes{
+    display: inline-block;
+    border: 2px solid black;
+    overflow-y: scroll;
+    width: 400px;
+}
+.favorites{
+    display: inline-block;
+    border: 2px solid black;
+    overflow-y: scroll;
+    width: 400px;
+}

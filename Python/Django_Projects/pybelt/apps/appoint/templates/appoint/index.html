@@ -9,11 +9,11 @@
     <title>Appointments</title>
 </head>
 <body>
-    <h2>Hello {{first_name}}</h2>
+    <h2>Hello {{User.first_name}}</h2>
     <a href="/appoint/logout">Logout</a>
     <div class="current">
         <p>Here are your appointments for today:  {{today}}</p>
-        <table>
+        <table class="tables">
             <thead>
                 <tr>
                     <th>Task</th>
@@ -28,7 +28,6 @@
                     <td>{{appointments.task}}</td>
                     <td>{{appointments.time}}</td>
                     <td>{{appointments.status}}</td>
-                    <td>{{appointments.id}}</td>
                     <td><p><a href="{{appointments.id}}/edit">Edit</a> | <a href="{{appointments.id}}/delete"> | Delete</a></p></td>
                 </tr>
                 {% endfor %}
@@ -37,7 +36,7 @@
     </div>
     <div class="upcoming">
         <p>Your Other Appointments</p>
-        <table>
+        <table class="tables">
             <thead>
                 <tr>
                     <th>Task</th>
