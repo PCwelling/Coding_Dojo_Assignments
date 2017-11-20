@@ -2,6 +2,10 @@
     margin: 0px;
     padding: 0px;
 }
+.logout{
+    margin-left: 940px;
+    display: inline-block;
+}
 .quotes{
     display: inline-block;
     border: 2px solid black;
@@ -13,4 +17,7 @@
     border: 2px solid black;
     overflow-y: scroll;
     width: 400px;
+}
+.contribute{
+    display: inline-block;
 }
