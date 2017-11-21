@@ -7,21 +7,19 @@ from django.contrib import messages
 
 # Create your views here.
 def index(request):
-
   context = {
     "quote" : Quote.objects.all(),
     "favorite" : Favorite.objects.all(),
-    "user" : User.objects.all(),
+    "user" : User.objects.get(id=request.session['user_id'])
   }
   return render(request, 'quotes/index.html', context)
 
 def create(request):
-  # errors = Quote.objects.validator(request.POST)
-  # if len(errors):
-  #   for field, message in errors.iteritems():
-  #     error(request, message, extra_tags=field)
-
-  #   return redirect('/')
+  result = Quote.objects.validate_quote(request.POST)
+  if type(result) == list:
+    for err in result:
+        messages.error(request, err)
+    return redirect('/quotes')
 
   Quote.objects.create(
     quote_by = request.POST['quote_by'],
@@ -37,6 +35,13 @@ def add(request, quote_id):
   favorite_update.quote_id = quote.id 
   favorite_update.save()
   return redirect('/quotes')
+
+def list(request, user_id):
+  context = {
+    "quote" : Quote.objects.get(id=user_id),
+  }
+  return render(request, 'quotes/quotes.html', context)
+
 
 def remove(request, favorite_id):
   quotefavorite.objects.get(id = favorite_id).delete()

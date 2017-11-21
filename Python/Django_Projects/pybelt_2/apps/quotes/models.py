@@ -6,7 +6,7 @@ from ..login.models import *
 
 class QuoteManager(models.Manager):
 
-    def quote_validator(self, post_data):
+    def validate_quote(self, post_data):
         errors = []
         # check length of quote_by fields
         if len(post_data['quote_by']) < 3:
@@ -14,7 +14,8 @@ class QuoteManager(models.Manager):
         # check length of quote password
         if len(post_data['quote']) < 10:
             errors.append("quote must be at least 10 characters")
-        return errors
+        if errors:
+            return errors
                
 class Quote(models.Model):
     quote = models.CharField(max_length = 255)

@@ -1,8 +1,8 @@
 from __future__ import unicode_literals
 import re
 import bcrypt
+import time
 from django.db import models
-
 
 # # Create your models here.
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9\.\+_-]+@[a-zA-Z0-9\._-]+\.[a-zA-Z]*$')
@@ -44,6 +44,9 @@ class UserManager(models.Manager):
         # check password == password_confirm
         if post_data['password'] != post_data['password_confirm']:
             errors.append("passwords do not match")
+        # check bod is not in future
+        if post_data['dob'] < time.strftime("%x"):
+            errors.append('Date of birth must be in the past')
 
         if not errors:
             # make our new user

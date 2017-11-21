@@ -11,13 +11,12 @@
 <body>
     <div class="wrapper">
         <p><a href="/quotes">Dashboard</a> | <a href="/quotes/logout">Logout</a></p>
-        <P>Posts by {{user.alias]}}</P>
+        <P>Posts by {{quotes.user.alias}}</P>
         <p>Count: {{count}}</p>
         <div class="quotes">
             <h2>Quotable Quotes</h2>
-            {% for quotes in quote%}
-            <p><span style="color:red">{{quote_by}}</span></p>
-            <p>{{quote}}</p>
+            {% for quotes in quote %}
+            <p><span style="color:red">{{quotes.quote_by}}</span> : {{quotes.quote}}</p>
             {% endfor %}
         </div>
     </div>  

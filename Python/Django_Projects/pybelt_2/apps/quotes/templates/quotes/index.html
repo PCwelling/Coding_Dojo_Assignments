@@ -10,39 +10,42 @@
 </head>
 <body>
     <div class="wrapper">
-        <!-- {% if messages %}
+        <a  class="logout" href="logout">Logout</a>
+        <h2>Welcome, {{user.alias}}!</h2>
+        <br>
+        <div class="quotes"> 
+            <h3>Quotable Quotes</h3>             
+            {% for quotes in quote %}
+            <div class="ind_quote">
+                <p>{{quotes.quote_by}} : {{quotes.quote}}</p>
+                <p>Posted by <a href="{{quotes.user.id}}/list">{{quotes.user.alias}}</a></p>
+                <form action="add" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Add to My List">
+                </form>
+            </div>
+            {% endfor %}
+        </div>       
+        <div class="favorites">
+            <h3>Your Favorites</h3>             
+            {% for favorites in favorite %}
+            <div class="ind_quote">
+                <p>{{quotes.quote_by}} : {{quotes.quote}}</p>
+                <form action="remove" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Remove to My List">
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+        {% if messages %}
         <div class="messages">
             {% for message in messages %}
             <p>{{message}}</p>
             {% endfor%}
         </div>
-        {% endif %} -->
-    
-        <a  class="logout" href="/logout">Logout</a>
-        <h2>Welcome, {{user.user_alias}}!</h2>
-        <br>
-        <div class="quotes">
-            <h3>Quotable Quotes</h3>
-            {% for quotes in quote %}
-            <p>{{quotes.id}} {{quotes.quote_by}} : {{quotes.quote}}</p>
-            <p>Posted by <a href="/list">{{user.user_alias}}</a></p>
-            <form action="add" method="post">
-                {% csrf_token %}
-                <input type="submit" value="Add to My List">
-            </form>
-            {% endfor %}
-        </div>
-        <div class="favorites">
-            <h3>Your Favorites</h3>
-            {% for favorites in favorite %}
-            <p>{{quotes.quote_by}} : {{quotes.quote}}</p>
-            <form action="remove" method="post">
-                {% csrf_token %}
-                <input type="submit" value="Remove to My List">
-            </form>
-            {% endfor %}
-        </div>
-        <br>
+        {% endif %}
         <div class="contribute">
             <h3>Contribute a Quote</h3>
             <form action="create" method="post">
