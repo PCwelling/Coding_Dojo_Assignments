@@ -9,36 +9,33 @@ from django.contrib import messages
 def index(request):
   context = {
     "quote" : Quote.objects.all(),
-    "favorite" : Favorite.objects.all(),
+    "favorite" : Favorite.objects.filter(user_id=request.session['user_id']),
     "user" : User.objects.get(id=request.session['user_id'])
   }
   return render(request, 'quotes/index.html', context)
 
 def create(request):
-  result = Quote.objects.validate_quote(request.POST)
+  result = Quote.objects.validate_quote(request.POST, request.session['user_id'])
   if type(result) == list:
-    for err in result:
-        messages.error(request, err)
-    return redirect('/quotes')
-
-  Quote.objects.create(
-    quote_by = request.POST['quote_by'],
-    quote = request.POST['quote'],
-    user_id = request.session['user_id'],
-  )
+  # if isinstance(result, list):
+        for err in result:
+              messages.error(request, err)
+        return redirect('/quotes')
+  messages.success(request, "Successfully added a quote!")
   return redirect('/quotes')
 
-def add(request, quote_id):
+def add(request, quotes_id):
      
-  favorite_update = favorite.objects.get(id = quote_id)
+  favorite_update = Favorite(quote_id="quote_id", user_id="user_id")
   favorite_update.user_id = request.session['user_id']
-  favorite_update.quote_id = quote.id 
+  favorite_update.quote_id = quotes_id
   favorite_update.save()
   return redirect('/quotes')
 
-def list(request, user_id):
+def show(request, user_id):
   context = {
-    "quote" : Quote.objects.get(id=user_id),
+    "quote" : Quote.objects.filter(user_id=user_id),
+    "user" : User.objects.get(id=user_id)
   }
   return render(request, 'quotes/quotes.html', context)
 

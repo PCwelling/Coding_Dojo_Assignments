@@ -11,27 +11,29 @@
 <body>
     <div class="wrapper">
         <a  class="logout" href="logout">Logout</a>
-        <h2>Welcome, {{user.alias}}!</h2>
+        <h2>Welcome, {{user.id}} | {{user.alias}}!</h2>
         <br>
         <div class="quotes"> 
             <h3>Quotable Quotes</h3>             
             {% for quotes in quote %}
+            {% if not quotes in favorite %}
             <div class="ind_quote">
-                <p>{{quotes.quote_by}} : {{quotes.quote}}</p>
-                <p>Posted by <a href="{{quotes.user.id}}/list">{{quotes.user.alias}}</a></p>
-                <form action="add" method="post">
+                <p>{{quotes.id}} {{quotes.quote_by}} : {{quotes.quote}}</p>
+                <p>Posted by <a href="{{quotes.user.id}}/show">{{quotes.user.alias}}</a></p>
+                <form action="{{quotes.id}}/add" method="post">
                     {% csrf_token %}
                     <input type="submit" value="Add to My List">
                 </form>
             </div>
+            {% endif %}
             {% endfor %}
         </div>       
         <div class="favorites">
             <h3>Your Favorites</h3>             
             {% for favorites in favorite %}
             <div class="ind_quote">
-                <p>{{quotes.quote_by}} : {{quotes.quote}}</p>
-                <form action="remove" method="post">
+                <p>{{favorites.id}}|{{favorites.quote.id}} {{favorites.quote.quote_by}} : {{favorites.quote.quote}}</p>
+                <form action="{{favorite_id}}/remove" method="post">
                     {% csrf_token %}
                     <input type="submit" value="Remove to My List">
                 </form>
