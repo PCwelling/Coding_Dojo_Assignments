@@ -19,21 +19,20 @@ def index(request):
   return render(request, 'quotes/index.html', context)
 
 def create(request):
-   if "user_id" not in request.session:
-        return redirect ('/')     
+  if "user_id" not in request.session:
+    return redirect ('/')
 
   result = Quote.objects.validate_quote(request.POST, request.session['user_id'])
   if type(result) == list:
-  # if isinstance(result, list):
-        for err in result:
-              messages.error(request, err)
-        return redirect('/quotes')
+    for err in result:
+      messages.error(request, err)
+    return redirect('/quotes')
   messages.success(request, "Successfully added a quote!")
   return redirect('/quotes')
 
 def add(request, quotes_id):
   if "user_id" not in request.session:
-        return redirect ('/')
+    return redirect ('/')
            
   favorite_update = Favorite(quote_id="quote_id", user_id="user_id")
   favorite_update.user_id = request.session['user_id']
@@ -41,15 +40,15 @@ def add(request, quotes_id):
   favorite_update.save()
   return redirect('/quotes')
 
-def show(request, user_id):
-  if "user_id" not in request.session:
-        return redirect ('/')
+# def show(request, user_id):
+#   if "user_id" not in request.session:
+#         return redirect ('/')
 
-  context = {
-    "quote" : Quote.objects.filter(user_id=user_id),
-    "user" : User.objects.get(id=user_id)
-  }
-  return render(request, 'quotes/quotes.html', context)
+#   context = {
+#     "item" : Wish.objects.get(id=item.id),
+#     "user" : User.objects.all().filter(),
+#   }
+#   return render(request, 'quotes/quotes.html', context)
 
 
 def delete(request, favorites_id):

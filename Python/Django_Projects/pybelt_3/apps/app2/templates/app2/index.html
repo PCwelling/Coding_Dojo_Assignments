@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "app2/style.css" %}">
+    <title>My Wish List</title>
+</head>
+<body>
+    <div class="wrapper">
+        <a  class="logout" href="logout">Logout</a>
+        <h3>Hello, {{user.u_name}}!</h3>
+        <br>
+        <div class="mylist">
+            <h3>Your Wish List</h3>            
+            <table class="tables">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Added By</th>
+                        <th>Date Added</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for favorites in mylist %}
+                    <tr>
+                        <td><a href="{{favorites.id}}/show">{{favorites.item.id}}{{favorites.item.item }}</a></td>
+                        <td>{{ item.user.u_name}}</td>
+                        <td>{{ item.date}}</td>
+                        <td>
+                            <form action="{{favorites.item.id}}/remove" method="post">
+                                {% csrf_token %}
+                                <input type="submit" value="Remove from my list">
+                            </form>                           
+                        </td>
+                        <td>
+                            <form action="{{favorites.id}}/delete" method="post">
+                                {% csrf_token %}
+                                <input type="submit" value="Delete Item">
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="otherlist">
+            <h3>Other Users' Wish List</h3>                
+            <table class="tables">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Added By</th>
+                        <th>Date Added</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in otherlist %}
+                    <tr>
+                        <td><a href="{{item.id}}/show">{{ item.item }}</a></td>
+                        <td>{{ item.user.u_name}}</td>
+                        <td>{{ item.date}}</td>
+                        <td>>
+                            <form action="{{item.id}}/add" method="post">
+                                {% csrf_token %}
+                                <input type="submit" value="Add to My List">   
+                            </form> 
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3><a href="new">Add Item</a></h3>
+    </div>  
+</body>
+</html>

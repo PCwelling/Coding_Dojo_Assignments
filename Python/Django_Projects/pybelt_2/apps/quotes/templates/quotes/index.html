@@ -16,7 +16,7 @@
         <div class="quotes"> 
             <h3>Quotable Quotes</h3>             
             {% for quotes in quote %}
-            {% if quotes.id != favorites.quote.id %}
+            <!-- {% if quotes.id != favorites.quote.id %} -->
             <div class="ind_quote">
                 <p>{{quotes.id}} {{quotes.quote_by}} : {{quotes.quote}}</p>
                 <p>Posted by <a href="{{quotes.user.id}}/show">{{quotes.user.alias}}</a></p>
@@ -25,7 +25,7 @@
                     <input type="submit" value="Add to My List">
                 </form>
             </div>
-            {% endif %}
+            <!-- {% endif %} -->
             {% endfor %}
         </div>       
         <div class="favorites">
