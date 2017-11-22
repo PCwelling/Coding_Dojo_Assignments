@@ -16,7 +16,7 @@
         <div class="quotes"> 
             <h3>Quotable Quotes</h3>             
             {% for quotes in quote %}
-            {% if not quotes in favorite %}
+            {% if quotes.id != favorites.quote.id %}
             <div class="ind_quote">
                 <p>{{quotes.id}} {{quotes.quote_by}} : {{quotes.quote}}</p>
                 <p>Posted by <a href="{{quotes.user.id}}/show">{{quotes.user.alias}}</a></p>
@@ -33,7 +33,7 @@
             {% for favorites in favorite %}
             <div class="ind_quote">
                 <p>{{favorites.id}}|{{favorites.quote.id}} {{favorites.quote.quote_by}} : {{favorites.quote.quote}}</p>
-                <form action="{{favorite_id}}/remove" method="post">
+                <form action="{{favorites.id}}/delete" method="post">
                     {% csrf_token %}
                     <input type="submit" value="Remove to My List">
                 </form>

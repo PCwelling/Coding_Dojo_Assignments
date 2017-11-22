@@ -7,14 +7,21 @@ from django.contrib import messages
 
 # Create your views here.
 def index(request):
+  if "user_id" not in request.session:
+        return redirect ('/')
+            
   context = {
-    "quote" : Quote.objects.all(),
+    "quote" : Quote.objects.all().exclude(favorites__user_id=request.session['user_id']),
+    # "excfav" : Quote.objects.exclude(),
     "favorite" : Favorite.objects.filter(user_id=request.session['user_id']),
     "user" : User.objects.get(id=request.session['user_id'])
   }
   return render(request, 'quotes/index.html', context)
 
 def create(request):
+   if "user_id" not in request.session:
+        return redirect ('/')     
+
   result = Quote.objects.validate_quote(request.POST, request.session['user_id'])
   if type(result) == list:
   # if isinstance(result, list):
@@ -25,7 +32,9 @@ def create(request):
   return redirect('/quotes')
 
 def add(request, quotes_id):
-     
+  if "user_id" not in request.session:
+        return redirect ('/')
+           
   favorite_update = Favorite(quote_id="quote_id", user_id="user_id")
   favorite_update.user_id = request.session['user_id']
   favorite_update.quote_id = quotes_id
@@ -33,6 +42,9 @@ def add(request, quotes_id):
   return redirect('/quotes')
 
 def show(request, user_id):
+  if "user_id" not in request.session:
+        return redirect ('/')
+
   context = {
     "quote" : Quote.objects.filter(user_id=user_id),
     "user" : User.objects.get(id=user_id)
@@ -40,8 +52,8 @@ def show(request, user_id):
   return render(request, 'quotes/quotes.html', context)
 
 
-def remove(request, favorite_id):
-  quotefavorite.objects.get(id = favorite_id).delete()
+def delete(request, favorites_id):
+  Favorite.objects.get(id = favorites_id).delete()
   return redirect('/quotes')
 
 def logout(request):
