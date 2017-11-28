@@ -4,34 +4,27 @@ from ..login.models import *
 
 # Create your models here.
 
-class WishManager(models.Manager):
+class ProductManager(models.Manager):
 
-    def validate_wish(self, post_data, user_id):
+    def validate_product(self, post_data, user_id):
         errors = []
-        # check length of quote_by field
+        # check length of item field
         if len(post_data['item']) < 3:
             errors.append("item field must be at least 3 characters")
 
         if len(errors) < 1:
             print "no errors"
-            new_wish = self.create(
+            new_product = self.create(
                 item = post_data['item'],
-                user_id = user_id,
+                user = request.session['user_id'],
             )
-            return new_wish      
+            return new_product      
         return errors
                
-class Wish(models.Model):
+class Product(models.Model):
     item = models.CharField(max_length = 255)
-    user = models.ForeignKey(User, related_name="wishes")
+    user = models.ManyToManyField(User, related_name="products")
     date = models.DateField(auto_now_add = True)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
-    objects = WishManager()
-
-class Favorite(models.Model):
-    user = models.ForeignKey(User, related_name="favorites")
-    wish = models.ForeignKey(Wish, related_name="favorites")
-    created_at = models.DateTimeField(auto_now_add = True)
-    updated_at = models.DateTimeField(auto_now = True)
-    objects = WishManager()
+    objects = ProductManager()

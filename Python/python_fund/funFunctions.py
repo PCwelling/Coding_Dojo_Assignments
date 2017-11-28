@@ -8,10 +8,11 @@ def odd_even(num):
 odd_even(10)
 
 # Multiply
-def multiply(arr,num):
-    for x in range(len(arr)):
-        arr[x] *= num
-    return arr
+
+def multiply(list,num):
+    for x in range(len(list)):
+        list[x] *= num
+    return list
 a = [2,4,10,16]
 b = multiply(a,5)
 print b

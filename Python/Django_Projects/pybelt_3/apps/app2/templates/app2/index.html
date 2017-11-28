@@ -11,7 +11,7 @@
 <body>
     <div class="wrapper">
         <a  class="logout" href="logout">Logout</a>
-        <h3>Hello, {{user.u_name}}!</h3>
+        <h3>Hello, customer number {{user.id}}, err.. we mean {{user.u_name}}!</h3>
         <br>
         <div class="mylist">
             <h3>Your Wish List</h3>            
@@ -25,23 +25,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for favorites in mylist %}
+                    {% for thing in mylist %}
                     <tr>
-                        <td><a href="{{favorites.id}}/show">{{favorites.item.id}}{{favorites.item.item }}</a></td>
-                        <td>{{ item.user.u_name}}</td>
-                        <td>{{ item.date}}</td>
-                        <td>
-                            <form action="{{favorites.item.id}}/remove" method="post">
-                                {% csrf_token %}
-                                <input type="submit" value="Remove from my list">
-                            </form>                           
-                        </td>
-                        <td>
-                            <form action="{{favorites.id}}/delete" method="post">
-                                {% csrf_token %}
-                                <input type="submit" value="Delete Item">
-                            </form>
-                        </td>
+                        <td><a href="{{thing.id}}/show">{{thing.id}}{{thing.item}}</a></td>
+                        <td>{{thing.user.u_name}}</td>
+                        <td>{{thing.date}}</td>
+                        <td><a href="{{thing.id}}/remove">Remove from my List</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -60,17 +49,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for item in otherlist %}
+                    {% for otlist in otherlist %}
                     <tr>
-                        <td><a href="{{item.id}}/show">{{ item.item }}</a></td>
-                        <td>{{ item.user.u_name}}</td>
-                        <td>{{ item.date}}</td>
-                        <td>>
-                            <form action="{{item.id}}/add" method="post">
-                                {% csrf_token %}
-                                <input type="submit" value="Add to My List">   
-                            </form> 
-                        </td>
+                        <td><a href="{{otlist.id}}/wshow">{{otlist.id}}{{otlist.item }}</a></td>
+                        <td>{{otlist.user.u_name}}</td>
+                        <td>{{ otlist.date}}</td>
+                        <td><a href="{{otlist.id}}/add">Add to my List</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>
