@@ -1,0 +1,11 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper{
+
+}
+form{
+    border: 2px solid black;
+    display: inline-block;
+}
