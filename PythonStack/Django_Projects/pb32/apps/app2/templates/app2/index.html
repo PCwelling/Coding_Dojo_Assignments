@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "app2/style.css" %}">
+    <title>My Wish List</title>
+</head>
+<body>
+    <div class = "wrapper">
+        <p><a href="logout">Logout</a></p> 
+        <h2>Hello customer number {{user.id}}, err we mean {{user.u_name}}</h2>
+        <br>
+        <h4>Your Wish List</h4>
+        <div class ="mylist">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Added By</th>
+                        <th>Date Added</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="">{{item}}</a></td>
+                        <td>{{added_by}}</td>
+                        <td>{{date_added}}</td>
+                        <td><a href=""></a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <br>
+        <h4>Other Users' Wish List</h4>
+        <div class = "otherlist">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Added By</th>
+                        <th>Date Added</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="">{{item}}</a></td>
+                        <td>{{added_by}}</td>
+                        <td>{{date_added}}</td>
+                        <td><a href=""></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3><a href="update">Add Item</a></h3>
+    </div>
+</body>
+</html>
