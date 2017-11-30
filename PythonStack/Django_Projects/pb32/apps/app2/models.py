@@ -15,15 +15,15 @@ class ProductManager(models.Manager):
 
             new_product = self.create(
                 item = post_data['item'],
-                added_by = user_id,
+                added_by = User.objects.get(id=user_id),
             )
             return new_product
         return errors
 
 class Product(models.Model):
     item = models.CharField(max_length=255)
-    added_by = models.ForeignKey(User, related name="added_items")
-    users = models.ManyToManyField(User, related_name="products")
+    added_by = models.ForeignKey(User, related_name="added_items")
+    users = models.ManyToManyField(User, related_name="wishlist_products")
     date_added = models.DateField(auto_now_add = True)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)

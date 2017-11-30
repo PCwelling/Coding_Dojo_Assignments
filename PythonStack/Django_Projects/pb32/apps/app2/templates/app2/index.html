@@ -24,14 +24,16 @@
                         <th>Action</th>
                     </tr>
                 </thead>
+                {% for product in mylist %}
                 <tbody>
                     <tr>
-                        <td><a href="">{{item}}</a></td>
-                        <td>{{added_by}}</td>
-                        <td>{{date_added}}</td>
-                        <td><a href=""></a></td>
+                        <td><a href="">{{product.item}}</a></td>
+                        <td>{{product.added_by}}</td>
+                        <td>{{product.date_added}}</td>
+                        <td><a href="{{product.id}}/delete">Delete</a></td>
                     </tr>
                 </tbody>
+                {% endfor %}
             </table>
 
         </div>
@@ -47,18 +49,20 @@
                         <th>Action</th>
                     </tr>
                 </thead>
+                {% for product in otherlist%}
                 <tbody>
                     <tr>
-                        <td><a href="">{{item}}</a></td>
-                        <td>{{added_by}}</td>
-                        <td>{{date_added}}</td>
-                        <td><a href=""></a></td>
+                        <td><a href="">{{product.id}} | {{product.item}}</a></td>
+                        <td>{{product.added_by}}</td>
+                        <td>{{product.date_added}}</td>
+                        <td><a href="{{product.id}}/update">Add to My List</a></td>
                     </tr>
                 </tbody>
+                {% endfor %}
             </table>
         </div>
         <br>
-        <h3><a href="update">Add Item</a></h3>
+        <h3><a href="new_item">Add Item</a></h3>
     </div>
 </body>
 </html>
