@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class = "wrapper">
-        <p><a href="logout">Logout</a></p> 
+        <p><a href="/app2/logout">Logout</a></p> 
         <h2>Hello customer number {{user.id}}, err we mean {{user.u_name}}</h2>
         <br>
         <h4>Your Wish List</h4>
@@ -27,7 +27,17 @@
                 {% for product in mylist %}
                 <tbody>
                     <tr>
-                        <td><a href="">{{product.item}}</a></td>
+                        <td><a href="{{product.id}}/read">{{product.item}}</a></td>
+                        <td>{{product.added_by}}</td>
+                        <td>{{product.date_added}}</td>
+                        <td><a href="{{product.id}}/remove">Remove from my Wishlist</a></td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+                {% for product in mylist2 %}
+                <tbody>
+                    <tr>
+                        <td><a href="{{product.id}}/read">{{product.item}}</a></td>
                         <td>{{product.added_by}}</td>
                         <td>{{product.date_added}}</td>
                         <td><a href="{{product.id}}/delete">Delete</a></td>
@@ -52,10 +62,10 @@
                 {% for product in otherlist%}
                 <tbody>
                     <tr>
-                        <td><a href="">{{product.id}} | {{product.item}}</a></td>
+                        <td><a href="{{product.id}}/read">{{product.item}}</a></td>
                         <td>{{product.added_by}}</td>
                         <td>{{product.date_added}}</td>
-                        <td><a href="{{product.id}}/update">Add to My List</a></td>
+                        <td><a href="{{product.id}}/update">Add to my Wishlist</a></td>
                     </tr>
                 </tbody>
                 {% endfor %}

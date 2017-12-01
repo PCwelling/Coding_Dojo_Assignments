@@ -6,15 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% load static %}
     <link rel="stylesheet" href="{% static "app2/style.css" %}">
-    <title>Item Information{{item}}</title>
+    <title>Item: {{item.item}}</title>
 </head>
 <body>
-    <p><a href="/">Home</a> | <a href="/logout">Logout</a></p>
-    <h2>{{item}}</h2>
-    <br>
+    <p><a href="/app2/">Home</a> | <a href="/app2/logout">Logout</a></p>    
+    <h2>{{item.item}}</h2>
     <h4>Users who added this product/item under their wish list:</h4>
-    {% for x in x %}
-    <p>{{user.alias}}</p>
+    <p>{{item.added_by}}</p>
+    {% for u_name in listers %}
+    <p>{{u_name}}</p>
     {% endfor %}
+
 </body>
 </html>

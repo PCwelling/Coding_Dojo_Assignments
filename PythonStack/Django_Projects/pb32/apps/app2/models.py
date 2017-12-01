@@ -17,8 +17,18 @@ class ProductManager(models.Manager):
                 item = post_data['item'],
                 added_by = User.objects.get(id=user_id),
             )
+            
+            # userObject=User.odjects.get(id=user_id)
+            # product.wishlist_products.add(userObject)
+
             return new_product
         return errors
+
+    def remove_wish(self, user_id, product_id):
+        user_object = User.objects.get(id=user_id)
+        product_object = Product.objects.get(id=product_id)
+        product_object.users.remove(user_object)
+        
 
 class Product(models.Model):
     item = models.CharField(max_length=255)
