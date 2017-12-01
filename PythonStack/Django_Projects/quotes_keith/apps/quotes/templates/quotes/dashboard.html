@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dashboard App</h1>
+
+
+        <form action= "/quotes/process" method="post">
+            {% csrf_token %}
+            <p>Contributed by: <input type="text" name="name"><br></p>
+            <p>Message: <textarea name="desc"></textarea><br></p>
+            <input type="submit" value="submit">
+        </form>
+        {%for Quote in allQuotes%}
+        <div style="border: black 2px;">
+        <p>Author: {{Quote.author}}</p>
+        <p>Quote: {{Quote.quotes}}</p>
+        <a href="/quotes/users/{{Quote.user.id}}">{{Quote.user.first_name}}</a>
+        <a href="/quotes/favQuote/{{Quote.id}}">Favorite this quote!</a>
+         </div>
+        {%endfor%}
+        <!-- <div>
+            {% csrf_token %}
+           <p><input type="text" name="name">Ralph Waldo Emerson</p>
+           <p><textarea name="desc">Do not </textarea><br></p>
+           <!-- <p><input type="text" name="name"></p>
+           <p><input type="text" name="name"></p>
+           <p><input type="text" name="name"></p>
+           <p><input type="text" name="name"></p>  -->
+        </div> 
+    
+    <h1>Favorited Quotes</h1>
+    {% for fav in favorited_quotes %}
+        {{fav.quotes}} <a href="/quotes/remove/{{fav.id}}">Remove</a>
+    {% endfor %}
+</body>
+</html>
