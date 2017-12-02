@@ -9,10 +9,19 @@
     <title>Appointments</title>
 </head>
 <body>
-    <h2>Hello {{User.first_name}}</h2>
-    <a href="/appoint/logout">Logout</a>
+    <a href="/appoint/logout">Logout</a>  
+    <h2>Hello {{user.first_name}}</h2>
+    <br>
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor%}
+    </div>
+    {% endif %}
+    <br>
     <div class="current">
-        <p>Here are your appointments for today:  {{today}}</p>
+        <p>Here are your appointments for today:  {{date}}</p>
         <table class="tables">
             <thead>
                 <tr>
@@ -23,17 +32,18 @@
                 </tr>
             </thead>
             <tbody>
-                {% for appointments in appointment %}
+                {% for appointment in current %}
                 <tr>
-                    <td>{{appointments.task}}</td>
-                    <td>{{appointments.time}}</td>
-                    <td>{{appointments.status}}</td>
-                    <td><p><a href="{{appointments.id}}/edit">Edit</a> | <a href="{{appointments.id}}/delete"> | Delete</a></p></td>
+                    <td>{{appointment.task}}</td>
+                    <td>{{appointment.time}}</td>
+                    <td>{{appointment.status}}</td>
+                    <td><p><a href="{{appointment.id}}/edit">Edit</a> | <a href="{{appointment.id}}/delete"> | Delete</a></p></td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
+    <br>
     <div class="upcoming">
         <p>Your Other Appointments</p>
         <table class="tables">
@@ -45,16 +55,17 @@
                 </tr>
             </thead>
             <tbody>
-                {% for appointments in appointment %}
+                {% for appointment in future %}
                 <tr>
-                    <td>{{ appointments.task }}</td>
-                    <td>{{ appointments.date}}</td>
-                    <td>{{ appointments.time}}</td>
+                    <td>{{ appointment.task }}</td>
+                    <td>{{ appointment.date}}</td>
+                    <td>{{ appointment.time}}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
+    <br>
     <div class = "add">
         <h3>Add an appointment</h3>
         <form action="create" method="post">

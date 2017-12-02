@@ -4,31 +4,27 @@ from ..login.models import User
 from models import *
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from datetime import datetime
+from time import strftime, gmtime, localtime
 
 # Create your views here.
 def index(request):
+
   context = {
-    "appointment" : Appointment.objects.all(),
-    "today" : datetime.date
+    "user" : User.objects.get(id=request.session['user_id']),
+    "current" : Appointment.objects.all(),
+    "future" : Appointment.objects.filter(date__gte_datetime.datetime.now),
+    "date" : strftime("%B-%d-%Y", gmtime())
   }
   return render(request, 'appoint/index.html', context)
 
 def create(request):
-  # errors = Appointment.objects.validator(request.POST)
-  # if len(errors):
-  #   for field, message in errors.iteritems():
-  #     error(request, message, extra_tags=field)
+  result = Appointment.objects.new_appointment_validate(request.POST,request.session['user_id'])
+  if type(result) == list:
+    for err in result:
+      messages.error(request, err)
+  return redirect('/appoint')
 
-  #   return redirect('/')
-
-  Appointment.objects.create(
-    date = request.POST['date'],
-    time = request.POST['time'],
-    task = request.POST['task'],
-    user_id = request.session['user_id'],
-    status = "Pending"
-  )
+  messages.success(request, "Successfully created an appointment!")
   return redirect('/appoint')
 
 def edit(request, appointment_id):
@@ -37,19 +33,11 @@ def edit(request, appointment_id):
   }
   return render(request, "appoint/update.html", context)      
 
-def update(request, appointment_id):
-#   errors = Appointment.objects.basic_validator(request.POST)
-#   if len(errors):
-#     for field, message in errors.iteritems():
-#       error(request, message, extra_tags=field)
-#     return redirect('/user/{}/edit/'.format(user_id))
-
-  appointment_update = Appointment.objects.get(id = appointment_id)
-  appointment_update.task = request.POST['task']
-  appointment_update.status = request.POST['status']
-  appointment_update.date= request.POST['date']
-  appointment_update.time= request.POST['time']
-  appointment_update.save()
+def update(request):
+  errors = Appointment.objects.update_appointment_validator(request.POST)
+  if len(errors):
+    for field, message in errors.iteritems():
+      error(request, message, extra_tags=field)
   return redirect('/appoint')
 
 def delete(request, appointment_id):
