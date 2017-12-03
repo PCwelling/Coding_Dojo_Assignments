@@ -4,7 +4,7 @@ from ..login.models import User
 from models import *
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from time import strftime, gmtime, localtime
+from time import strftime, gmtime
 
 # Create your views here.
 def index(request):
@@ -12,8 +12,8 @@ def index(request):
   context = {
     "user" : User.objects.get(id=request.session['user_id']),
     "current" : Appointment.objects.all(),
-    "future" : Appointment.objects.filter(date__gte_datetime.datetime.now),
-    "date" : strftime("%B-%d-%Y", gmtime())
+    "future" : Appointment.objects.all(),
+    "date" : strftime("%B-%d-%Y", gmtime()),
   }
   return render(request, 'appoint/index.html', context)
 
