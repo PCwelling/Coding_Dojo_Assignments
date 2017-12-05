@@ -3,39 +3,46 @@ from __future__ import unicode_literals
 from django.db import models
 from ..login.models import User
 
+# # Create your models here.
 
-# Create your models here.
-class ProductManager(models.Manager):
+class QuoteManager(models.Manager):
 
-    def validate_product(self, post_data, user_id):
+    def validate_quote(self, post_data, user_id):
         errors = []
-        # check length of item fields
-        if len(post_data['item']) < 2:
-            errors.append("item field must be at least 3 characters")
+        # check length of quote field
+        if len(post_data['quote']) < 10:
+            errors.append("Quote field must be at least 10 characters")
+        # check length of author field
+        if len(post_data['author']) < 3:
+            errors.append("Quoted By field must be at least 3 characters")
+
         if not errors:
+            # make our new quote
 
-            new_product = self.create(
-                item = post_data['item'],
-                added_by = User.objects.get(id=user_id),
+            new_quote = self.create(
+                quote = post_data['quote'],
+                author = post_data['author'],
+                user_id = user_id,
             )
-            
-            # userObject=User.odjects.get(id=user_id)
-            # product.wishlist_products.add(userObject)
-
-            return new_product
+            return new_quote
         return errors
 
-    def remove_wish(self, user_id, product_id):
-        # user_object = User.objects.get(id=user_id)
-        # product_object = Product.objects.get(id=product_id)
-        # product_object.users.remove(user_object)
-        
+    # def update_quote(self, quote_id, user_id):
+    #     favorites_update = Quote.objects.get(id=quote_id)
+    #     favorites_update.favorites.add(User.objects.get(id=user_id))       
+    #     favorites_update.save()
 
-class Product(models.Model):
-    # item = models.CharField(max_length=255)
-    # added_by = models.ForeignKey(User, related_name="added_items")
-    # users = models.ManyToManyField(User, related_name="wishlist_products")
-    # date_added = models.DateField(auto_now_add = True)
+    # def delete_favorite(self, quote_id, user_id):
+    #     favorites_delete = Quote.objects.get(id=quote_id)
+    #     favorites_delete.favorites.remove(User.objects.get(id=user_id))       
+    #     favorites_delete.save()
+
+
+class Quote(models.Model):
+    # quote = models.CharField(max_length=255)
+    # author = models.CharField(max_length=255)
+    # user = models.ForeignKey(User, related_name = 'posted_by')
+    # favorites = models.ManyToManyField(User, related_name ='favorite_quotes')
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
-    objects = ProductManager()
+    objects = QuoteManager()

@@ -27,7 +27,7 @@ class UserManager(models.Manager):
     def validate_registration(self, post_data):
         errors = []
         # check length of name fields
-        if len(post_data['first_name']) < 2:
+        if len(post_data['first_name']) < 2 or len(post_data['last_name']) < 2:
             errors.append("name fields must be at least 3 characters")
         # check length of name password
         if len(post_data['password']) < 8:
@@ -52,6 +52,7 @@ class UserManager(models.Manager):
 
             new_user = self.create(
                 first_name=post_data['first_name'],
+                last_name=post_data['last_name'],
                 email=post_data['email'],
                 dob=post_data['dob'],
                 password=hashed
@@ -61,11 +62,10 @@ class UserManager(models.Manager):
 
 class User(models.Model):
     first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
     email = models.EmailField(max_length=255)
     password = models.CharField(max_length=255)
     dob = models.DateField()
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
     objects = UserManager()
-    def __str__ (self):
-        return self.email
