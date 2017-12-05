@@ -25,12 +25,12 @@ class AppointmentManager(models.Manager):
                 time = post_data['time'],
                 task = post_data['task'],
                 status = 'Pending',
-                user = user_id,
+                user_id = user_id,
             )
             return new_appointment
         return errors
 
-    def update_appointment_validate(self, post_data):
+    def update_appointment_validate(self, post_data, appointment_id):
         errors = []
 
         # check if appointment date is in future
@@ -47,10 +47,12 @@ class AppointmentManager(models.Manager):
             appointment_update.task = post_data['task'],
             appointment_update.status = post_data['status'],
             appointment_update.date= post_data['date'],
-            appointment_update.time= post_dat['time'],
-            appointment_update.save()
+            appointment_update.time= post_data['time'],
+            appointment_update.save()     
+        
+        return errors
 
-        return redirect('/appoint')
+
             
 class Appointment(models.Model):
     date = models.DateField()

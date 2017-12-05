@@ -12,7 +12,7 @@ def index(request):
   context = {
     "user" : User.objects.get(id=request.session['user_id']),
     "current" : Appointment.objects.all(),
-    "future" : Appointment.objects.all(),
+    "future" : Appointment.objects.filter(id=request.session['user_id']),
     "date" : strftime("%B-%d-%Y", gmtime()),
   }
   return render(request, 'appoint/index.html', context)
@@ -33,8 +33,8 @@ def edit(request, appointment_id):
   }
   return render(request, "appoint/update.html", context)      
 
-def update(request):
-  errors = Appointment.objects.update_appointment_validator(request.POST)
+def update(request, appointment_id):
+  errors = Appointment.objects.update_appointment_validate(request.POST, appointment_id)
   if len(errors):
     for field, message in errors.iteritems():
       error(request, message, extra_tags=field)
