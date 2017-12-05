@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "app2/style.css" %}">
+    <title>Page 2</title>
+</head>
+<body>
+    <div class = "wrapper">
+        <p><a href="/app2/">Dashboard</a> | <a href="/app2/logout">Logout</a></p>
+        <br>
+        <h3>Post by {{user.alias}}</h3>
+        <h4>Count {{quotes.count}}</h4>
+        <br>
+        {% for quote in quotes %}
+        <p><span style="color:red">{{quote.author}}</span>: {{quote.quote}}</p>
+        {% endfor %}
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "app2/style.css" %}">
+    <title>Quotes</title>
+</head>
+<body>
+    <div class="wrapper">
+        <p><a href="/app2/logout">Logout</a></p>
+        <h2>Welcome, {{user.alias}}!</h2>
+        <h3>Quotable Quotes</h3>
+        <div class = "qq">
+            {% for quote in quotes %}
+            <div class = "quote">
+                <p>{{quote.author}}: {{quote.quote}}</p>
+                <form action="/app2/{{quote.id}}/update" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Add to My List">
+                </form>
+                <p>Posted By <a href="/app2/{{quote.user.id}}/read">{{quote.user.alias}}</a></p>
+            </div>
+            {% endfor %}
+        </div>
+        <div class = "fq">
+            <h3>Your Favorites</h3>        
+            {% for quote in favorites %}        
+            <div class = "quote">
+                <p>{{quote.author}}: {{quote.quote}}</p>
+                <form action="/app2/{{quote.id}}/delete" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Remove From My List">
+                </form>
+                <p>Posted By <a href="/app2/{{quote.user.id}}/read">{{quote.user.alias}}</a></p>
+            </div>
+            {% endfor %}
+        </div>        
+        <div class = "contribute">
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <p>{{message}}</p>
+                {% endfor%}
+            </div>
+            {% endif %}
+            <h3>Contribute a Quote:</h3>
+            <form action="/app2/create" method="post">
+                {% csrf_token %}
+                <p>Quoted By:</p>
+                <input type="text" name="author" id="author">
+                <p>Quote:</p>
+                <textarea name="quote" id="quote" cols="30" rows="10"></textarea>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>  
+</body>
+</html>
