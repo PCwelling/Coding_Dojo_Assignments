@@ -27,7 +27,7 @@ def login(request):
         return redirect('/')
     request.session['user_id'] = result.id
     messages.success(request, "Successfully logged in!")
-    return redirect('/appoint')
+    return redirect('/app2')
 
 def success(request):
     try:
