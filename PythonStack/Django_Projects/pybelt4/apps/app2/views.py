@@ -12,9 +12,9 @@ def index(request):
 
     context = {
         "user" : User.objects.get(id=request.session['user_id']),
-        "myplan" : Trip.objects.filter(id = request.session['user_id']),
+        "myplan" : Trip.objects.filter(user = request.session['user_id']),
         "myplan2" : Trip.objects.filter(favorites__id=request.session['user_id']),
-        "otherplan" : Trip.objects.exclude(id=request.session['user_id']).exclude(favorites__id=request.session['user_id']),
+        "otherplan" : Trip.objects.exclude(user=request.session['user_id']).exclude(favorites__id=request.session['user_id']),
     }
     return render(request, "app2/index.html", context)
 
