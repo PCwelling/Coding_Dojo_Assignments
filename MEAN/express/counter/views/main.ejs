@@ -9,16 +9,17 @@
 <body>
     <div id="counter">
         <h1>Counter</h1>
-        <!-- <p>This route has been viewed <%= req.session.count %> times</p> -->
+        <p>This route has been viewed <%= count %> times</p>
+        <p>Refresh the page to increase the counter.</p>
     </div>
     <div id="bonus">
         <div id="level1">
-            <form action="/plustwo" method="post">
+            <form action="/plustwo" method="get">
                 <input type="submit" value="Plus 2">
             </form>
         </div>
         <div id="level2">
-            <form action="/reset" method="post">
+            <form action="/reset" method="get">
                 <input type="submit" value="Reset">
             </form>
         </div>
