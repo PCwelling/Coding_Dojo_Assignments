@@ -1,0 +1,26 @@
+1> Start django environment
+
+2> django-admin startproject (project name)
+3> cd (project name)
+4> mkdir apps
+5> cd apps
+6> touch __init__.py
+7> django-admin startapp (app name)
+8> cd (app name)
+9> touch urls.py
+10> mkdir templates
+11> cd templates
+12> mkdir (app name)
+13> cd (app name)
+14> touch index.html
+
+15> repeat steps 10 (mkdir static) - 14 (touch style.css)
+
+16> repeat steps 7-15 for other apps
+
+17> in (project name) settings.py add app name yo installed apps ("apps.appname",)
+
+18> in (project name) urls.py add include to import line
+19> in (project name) urls.py urlpatterns add  url(r'^', include('apps.appname.urls')),
+
+

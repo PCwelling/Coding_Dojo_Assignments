@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>    
+
+<!-- Basic 1 -->
+<script>
+    var x = [];
+    console.log(x);
+    x.push("coding");
+    x.push("dojo");
+    x.push("rocks");
+    x.pop();
+    console.log(x[x.lenght-1])
+</script>
+
+<!-- Basic 2 -->
+<script>
+    const y = [];
+    console.log(y);
+    y.push(88);
+    // const y had the value of 88 added to it
+</script>
+
+<!-- Basic 3 -->
+<script>
+    var z = [9, 10, 6, 5, -1, 20, 13, 2]
+    for (var i=0; i < z.length; i++){
+        console.log(z[i]);
+    }
+    for (var y=0; y < z.length-1; y++){
+        console.log(z[y])
+    }
+</script>
+
+<!-- Basic 4A -->
+<script>
+    var names = ["Kadie", "Joe", "Fritz", "Pierre", "Alphonso"]
+    for (var i=0; i<names.length; i++){
+        console.log(names[i].lenght);
+    }
+</script>
+
+<!-- Basic 4B -->
+<script>
+    var names = ["Kadie", "Joe", "Fritz", "Pierre", "Alphonso"]
+    for (var i=0; i<names.length; i++){
+        if(names[i].length === 5){
+            console.log(names[i]);
+        }
+    }   
+</script>
+
+<!-- Basic 5 -->
+<script>
+    function yell(str){
+        console.log(str.toUpperCase());
+    } 
+    yell("hello world!")
+</script>
+</body>
+</html>

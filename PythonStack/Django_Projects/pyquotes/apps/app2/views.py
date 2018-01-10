@@ -14,7 +14,7 @@ def index(request):
     }
     return render(request, 'app2/index.html', context)
 
-def logout(request):
+def logout(reques
     del request.session['user_id']
     return redirect('/')
 

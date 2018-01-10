@@ -1,0 +1,18 @@
+<html>
+<body>
+<script>
+    function Teacher(name,stack, power_level,fav_phrase){
+        this.name = name;
+        this.stack = stack;
+        this.power_level = power_level;
+        this.fav_phrase = fav_phrase;
+        this.speak = function(fav_phrase){
+            console.log(fav_phrase)
+        }
+    }
+    var t1 = new Teacher("Ray", "MEAN", "over 9000", "everything is an object");
+    console.log(t1);
+    t1.speak()
+</script>   
+</body>
+</html>
