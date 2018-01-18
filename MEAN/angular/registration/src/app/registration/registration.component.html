@@ -1,0 +1,117 @@
+<h1>{{title}}</h1>
+
+<div id="hidden" *ngIf="users.length >= 1">
+      <p>Thank you for registering with us {{users[users.length -1].firstName}}! We just sent a confirmation email to <a href="">{{users[users.length -1].email}}</a>, and we will send all mail to: {{users[users.length -1].street}} {{users[users.length -1].city}} {{users[users.length -1].state}}</p>
+  <p>Have a wonderful day!</p>
+</div>
+
+<div class = "acctinfo">
+  <fieldset>
+    <legend>Account Information</legend>
+    <form (submit)="onSubmit()" #formData='ngForm'>
+
+      <label for="firstName">First Name</label>
+      <input type="text" name="firstName"
+      required
+      min length="4"
+      max length="24"
+      [(ngModel)]="user.firstName"
+      #firstName="ngModel">
+      <span class="error" *ngIf="firstName.errors">* Required, 4 characters minimum</span>
+      <br>
+
+      <label for="lastName">Last Name</label>
+      <input type="text" name="lastName"
+      required
+      min length="4"
+      max length="24"
+      [(ngModel)]="user.lastName"
+      #lastName="ngModel">
+      <span class="error" *ngIf="lastName.errors">* Required, 4 characters minimum</span>
+      <br>
+
+      <label for="email">Email Address</label>
+      <input type="email" name="email"
+      required
+      min length="4"
+      max length="24"
+      [(ngModel)]="user.email"
+      #email="ngModel">
+      <span class="error" *ngIf="email.errors"> * Required</span>
+      <br>
+
+      <label for="password">Password</label>
+      <input type="password" name="password"
+      required
+      min length="8"
+      max length="15"
+      pattern="^([a-zA-Z0-9@*#]{8,15})$"
+      [(ngModel)]="user.password"
+      #password="ngModel">
+      <span class="error" *ngIf="password.errors">* Required</span>
+      <br>
+
+      <label for="confirmpw">Confirm Password</label>
+      <input type="password" name="confirmpw"
+      required
+      [(ngModel)]="user.confirmpw"
+      #confirmpw="ngModel">
+      <span *ngIf="user.confirmpw != user.password">* Confirm Password must match Password</span>
+      <br>
+
+      <label for="street">Street</label>
+      <input type="text" name="street"
+      required
+      min length="4"
+      max length="24"
+      [(ngModel)]="user.street"
+      #street="ngModel">
+      <span class="error" *ngIf="street.errors">* Required</span>
+      <br>
+
+      <label for="apt">Apartment/Unit</label>
+      <input type="text" name="apt"
+      min length="2"
+      max length="24"
+      [(ngModel)]="user.apt"
+      #apt="ngModel">
+      <div class="error" *ngIf="apt.errors"> {{apt.errors | json}}</div>
+      <br>
+
+      <label for="city">City</label>
+      <input type="text" name="city"
+      required
+      min length="4"
+      max length="24"
+      [(ngModel)]="user.city"
+      #city="ngModel">
+      <span class="error" *ngIf="city.errors">* Required</span>
+      <br>
+
+      <label for="state">State</label>
+      <input type="text" name="state"
+      required
+      min length="2"
+      max length="24"
+      [(ngModel)]="user.state"
+      #state="ngModel">
+      <span class="error" *ngIf="state.errors">* Required</span>
+      <br>
+
+      <label for="lucky">I'm Feeling Lucky!</label>
+      <input type="radio" name="lucky" value="yes"
+      required
+      [(ngModel)]="user.lucky"
+      #lucky="ngModel">Yes      
+      <input type="radio" name="lucky" value="no"
+      required
+      [(ngModel)]="user.lucky"
+      #lucky="ngModel">No
+      <span class="error" *ngIf="city.errors">* Required</span>
+      <br>
+      <br>
+      <input type="submit" value="Register" name="submit" [disabled]="formData.invalid">
+    </form>  
+  </fieldset>
+
+</div>

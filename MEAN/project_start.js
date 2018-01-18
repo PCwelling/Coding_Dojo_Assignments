@@ -1,6 +1,6 @@
 mkdir dir_name // make a directory
 cd dir_name // change into directory
-nmp init -y //node package manager initilize yes, creates package.json file
+npm init -y //node package manager initilize yes, creates package.json file
 npm install express body-parser express-session mongoose path, ejs --save //list of packages to install
 mkdir views // creates views file, comprable to client
 touch server.js // creates a server.js file
@@ -12,7 +12,7 @@ touch server.js // creates a server.js file
     var session = require('express-session') // imports express session
     app.use(bp.urlencoded()); //
     app.use(express.static(path.join(__dirname,"/client"))); //sets up pathing for static folder
-    app.use(session({secret: your_secret_word_here})); // sets your secret word for session
+    app.use(session({secret: "your_secret_word_here"})); // sets your secret word for session
     app.set("views", path.join(__dirname, "/views"));
     app.set("view engine", "ejs");
 

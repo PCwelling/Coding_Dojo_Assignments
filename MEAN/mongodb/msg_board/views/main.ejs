@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Message Board</title>
+</head>
+<body>
+    <h1>The Dojo Message Board</h1>
+    <br>
+    <div id="errors">
+        <% if(typeof(errors) != 'undefined' ) { %>
+            <% for (var x in errors) { %>
+                <h3><%= errors[x].message %></h3>
+            <% } %>
+        <% } %>     
+    </div>
+    <br>
+    <div id="create_msg" >
+        <form action="/newmsg" method="post">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="60" rows="3"></textarea>
+            <br>
+            <input type="submit" value="Post Message">
+        </form>
+    </div>
+    <% for( var user in users) { %>
+        <div id="list_msg">
+            <h4>Name: <%= users[user]['name'] %></h4>
+            <h4>Message: <%= users[user]['message'] %></h4>
+
+            <% for( var comment in users[user]['comments'])  { %>
+            <div id="list_comment">
+                <h5>Name: <%= users[user]['comments'][comment]['name'] %></h5>
+                <h5>Comment: <%= users[user]['comments'][comment]['comment'] %></h5>           
+            </div>
+            <% } %>
+
+            <div id="create_comment">
+                <form action="/comment/<%= users[user]['_id'] %>" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+                    <label for="comment">Comment</label>
+                    <textarea name="comment" id="comment" cols="60" rows="3"></textarea>
+                    <br>
+                    <input type="submit" value="Post Comment">
+                </form>
+            </div>
+        </div>
+    <% } %>
+</body>
+</html>

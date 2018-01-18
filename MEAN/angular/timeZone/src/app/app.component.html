@@ -1,0 +1,8 @@
+<div id="main">
+    <h1>{{title}}</h1>
+    <div id="button-block">
+      <button *ngFor='let zone of zones' (click)='buttonClick(zone)' [ngClass]="{'highlit': clicked==zone}">{{zone}}</button>
+      <button (click)='buttonClick("")'>Clear</button>
+    </div>
+    <div id="clock">{{setTime() | date:'medium'}}</div>
+  </div>

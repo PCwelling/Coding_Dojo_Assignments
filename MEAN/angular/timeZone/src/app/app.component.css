@@ -1,0 +1,15 @@
+.highlit{
+    background-color: yellow;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#clock{
+    font-size: 50px;
+    margin-top: 20px;
+}
