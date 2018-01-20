@@ -1,0 +1,14 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#city-list{
+    list-style-type: none;
+}
+.city-li{
+    float: left;
+}
+.city-li a{
+    text-align: center;
+    padding: 10px;
+}
