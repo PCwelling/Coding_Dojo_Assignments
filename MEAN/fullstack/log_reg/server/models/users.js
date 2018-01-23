@@ -7,11 +7,7 @@ var UserSchema = new Schema({
         required: true,
         minlength: 3,
     },
-    email: {
-        type: String,
-        required: true,
-        unique: true,
-    }
+
 })
 
 mongoose.model('User', UserSchema);
