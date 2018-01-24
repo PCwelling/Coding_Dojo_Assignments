@@ -1,0 +1,5 @@
+<form (submit) = "addNote()">
+  <label for="textarea">Note: </label>
+  <textarea name="noteText" [(ngModel)]='note.noteText' #noteText="ngModel" id="" cols="100" rows="1"></textarea>
+  <input type="submit" value="Add Note">
+</form>
