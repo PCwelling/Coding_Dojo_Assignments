@@ -13,4 +13,13 @@ export class DataService {
       callback(res.json());
     })
   }
+
+  retrieveAll() {
+    this._http.get('/note').subscribe(
+      tasks => this.noteObserver.next(note.json()),
+      errorResponse => console.log(errorResponse)
+    );
+  }
+
+
 }

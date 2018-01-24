@@ -22,6 +22,10 @@ export class NoteComponent implements OnInit {
   }
 
   ngOnInit() {
+    this._dataService.noteObserver.subscribe(
+      note => this.note = note
+    );
+    this._dataService.retrieveAll();
   }
 
 }

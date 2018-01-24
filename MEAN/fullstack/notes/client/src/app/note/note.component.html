@@ -3,3 +3,8 @@
   <textarea name="noteText" [(ngModel)]='note.noteText' #noteText="ngModel" id="" cols="100" rows="1"></textarea>
   <input type="submit" value="Add Note">
 </form>
+<ul>
+  <li ngFor="let note of notes">
+    <p>{{note.noteText}}</p>
+  </li>
+</ul>
