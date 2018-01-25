@@ -1,0 +1,39 @@
+<a href="/logout">Logout</a>
+
+<h1>Quote Maker</h1>
+
+<h1>Welcome {{user.name}}</h1>
+
+<h3>Add A Quote</h3>
+<form (submit)='addQuote()'>
+    <input type="text" name="quote"
+    required
+    minlength='2'
+    maxlength='500'
+    [(ngModel)] ="quote.quote"
+    #quotey="ngModel"
+    />
+    <br>
+    <div *ngIf="!quotey.valid">Your quote must be at least two letters?</div>
+    <input [disabled]='!quotey.valid' type="submit" value="submit">
+</form>
+
+<div>
+    <table>
+        <tr>
+            <th>Quote</th>
+            <th>Quoted By</th> 
+            <th>Likes</th>
+            <th>Actions</th>
+          </tr>
+          <tr *ngFor='let quote of allquotes; let idx=index' >
+            <td>{{quote.quote}}</td>
+            <td>{{quote.quote_by}}</td> 
+            <td>{{quote.likes}}</td>
+            <td>
+                <button (click)='onDelete(quote._id, idx)'>Delete</button>
+                <button (click)='onLike(quote._id, idx)'>Like</button>
+            </td>
+          </tr>
+    </table>
+</div>

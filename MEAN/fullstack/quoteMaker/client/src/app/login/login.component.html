@@ -1,0 +1,13 @@
+<form (submit)='login()' >
+  <input type="text" name="name"
+  required
+  minlength='2'
+  maxlength='24'
+  pattern="^([a-zA-Z]{2,24})$"
+  [(ngModel)] ="user.name"
+  #name="ngModel"
+  >
+  <br>
+  <div *ngIf="!name.valid">Your name must be at least two letters?</div>
+  <input [disabled]='!name.valid' type="submit" value="Login / Registration">
+</form>
