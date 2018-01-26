@@ -1,0 +1,16 @@
+<a href="/logout">Logout</a>
+<h2>Welcome, {{userName}}!</h2>
+<a [routerLink]="['/add']">Add A Question</a>
+<br>
+<table>
+    <tr>
+        <th>Question</th>
+        <th>Answers</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let question of allQuestions">
+        <td>{{question.question}}</td>
+        <td>{{question.answers}}</td>
+        <td><a [routerLink]="['/question-profile', question._id]">Show</a> <a [routerLink]="['/answer', question._id]">Answer</a></td>
+    </tr>
+</table>

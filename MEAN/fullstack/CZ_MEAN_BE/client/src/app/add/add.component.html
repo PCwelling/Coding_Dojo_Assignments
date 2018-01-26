@@ -1,0 +1,19 @@
+<a [routerLink]="['/']">Home</a>
+<a href="/logout">Logout</a>
+<h1>New Question</h1>
+<br>
+<form (submit)="AddQuestion()">
+  Question 
+  <br>
+  <textarea name="question" [(ngModel)]='question.question'></textarea>
+  <br>
+  Description 
+  <br>
+  <textarea name="description" [(ngModel)]='question.description'></textarea>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+<br>
+<p *ngIf="errorMsg.length > 0">{{errorMsg}}</p>
+<br>
+<button [routerLink]="['/']">Cancel</button>

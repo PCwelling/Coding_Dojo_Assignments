@@ -1,0 +1,15 @@
+<a [routerLink]="['/']">Home</a>
+<br>
+<a [routerLink]="['/answer', questionId]">Answer this Question</a>
+<br>
+<a href="/logout">Logout</a>
+<br>
+<h1>{{curQuestion}}</h1>
+<h3>{{curDescription}}</h3>
+
+<div *ngFor="let answer of allAnswers">
+    <h4>{{answer.userName}}:</h4>
+    <p>{{answer.content}}</p>
+    <p [ngStyle]="{'font-weight': 'bold'}">{{answer.description}}</p>
+    {{answer.Likes}} <button (click)="AddLike(answer._id)">Like!</button>
+</div>

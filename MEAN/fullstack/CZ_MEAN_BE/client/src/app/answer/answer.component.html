@@ -1,0 +1,23 @@
+<a [routerLink]="['/']">Home</a>
+<br>
+<a [routerLink]="['/question-profile', questionId]">Go back to Question</a>
+<br>
+<a href="/logout">Logout</a>
+<br>
+<h1>{{curQuestion}}</h1>
+<h3>{{curDescription}}</h3>
+<br>
+<form (submit)="AnswerQuestion()">
+  Your answer:
+  <br>
+  <textarea name="question" [(ngModel)]='answer.answer'></textarea>
+  <br>
+  Supporting details for your answer (optional) 
+  <br>
+  <textarea name="description" [(ngModel)]='answer.description'></textarea>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+<p *ngIf="errorMsg.length > 0">{{errorMsg}}</p>
+<br>
+<button [routerLink]="['/']">Cancel</button>
