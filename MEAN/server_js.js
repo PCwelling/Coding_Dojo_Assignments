@@ -5,7 +5,7 @@ var bp = require('body-parser'); // imports body-parser(allows sending of info f
 var path = require('path'); // imports path  - creates paths to file folders
 var session = require('express-session') // imports express session
 app.use(bp.urlencoded()); // chnages to app.use(bp.json()); when using angular
-app.use(express.static(path.join(__dirname,"/client"))); //sets up pathing for static folder
+app.use(express.static(path.join(__dirname,"/client/dist"))); //sets up pathing for static folder
 app.use(session({secret: your_secret_word_here})); // sets your secret word for session
 app.set("views", path.join(__dirname, "/views")); // not included when using angular
 app.set("view engine", "ejs"); // not included when using angular

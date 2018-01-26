@@ -30,8 +30,10 @@
             <td>{{quote.quote}}</td>
             <td>{{quote.quote_by}}</td> 
             <td>{{quote.likes}}</td>
-            <td>
+            <td *ngIf='user.name == quote.quote_by'>
                 <button (click)='onDelete(quote._id, idx)'>Delete</button>
+            </td>
+            <td *ngIf='user.name !== quote.quote_by'>
                 <button (click)='onLike(quote._id, idx)'>Like</button>
             </td>
           </tr>

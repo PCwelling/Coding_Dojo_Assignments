@@ -1,0 +1,14 @@
+<a href="/logout"></a>
+
+<h1>Hello {{user.name}}, find friends below.</h1>
+
+<h1> Your Friends</h1>
+<div>
+<p>{{user.name}} <button>Remove Friend</button></p>
+</div>
+
+
+<h2>Other's Friends</h2>
+<div *ngFor='let user of allusers'>
+<p>{{user.name}} <button>Add Friend</button></p>
+</div>
