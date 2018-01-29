@@ -1,0 +1,47 @@
+<h4>Bucket List <a href="">Home</a> | <a href="">Logout</a></h4> 
+<br>
+<h3>Welcome, {{username.name}}!</h3>
+<form (submit)='newItem()'>
+  <label for="title">Title</label>
+  <input type="text" name="title" id=""
+  required
+  minlength='5'
+  maxlength='25'
+  [(ngModel)]="list.title"
+  #title='ngModel'
+  />
+  <label for="desc">Description</label>
+  <input type="text" name="desc" id=""
+  required
+  minlength='10'
+  maxlength='100'
+  [(ngModel)]="list.desc"
+  #desc='ngModel'
+  />
+  <select name="tagged" [(ngModel)]='tagged'>
+    <ng-container *ngFor='let user of allusers'>
+      <option *ngIf='user._id != username._id'value="">{{user.name}}</option>
+    </ng-container>  
+  </select>
+  <input type="submit" value="Add to List">
+</form>
+<br>
+<div>
+  <h3>Before I die I want to:</h3>
+  <table>
+    <tr *ngFor='let item of allitems'>
+      <td> <input type="checkbox" name="done" id=""> </td>
+      <td>{{item.username}}</td>
+      <td>{{item.title}}</td>
+      <td>{{item.desc}}</td>
+      <td>{{item.createdAt | date:'short'}}</td>
+    </tr>
+  </table>
+</div>
+<br>
+<div>
+  <h3>List of other users. (Click to view profile):</h3>
+  <div *ngFor='let user of allusers'>
+    <a *ngIf='user._id != username._id' [routerLink]="['user', user._id]" href="">{{user.name}}</a>
+  </div>
+</div>
