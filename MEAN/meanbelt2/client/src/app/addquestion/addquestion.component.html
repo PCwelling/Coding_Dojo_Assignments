@@ -1,0 +1,42 @@
+<h4><a href="">Home</a> | <a (click)='addQuestion()' href="">Add A Question</a> | <a href="">Logout</a></h4> 
+<h3>Hello, please add a new question</h3>
+<form (submit)='newQuestion()'>
+  <label for="question">Question:</label>
+  <input type="text" name="question" id="" 
+  required
+  minlength='15'
+  maxlength='250'
+  [(ngModel)]='trivia.question'
+  #quest='ngModel' 
+  >
+  <br>
+  <label for="correct">Correct Answer:</label>
+  <input type="text" name="correct"
+  required
+  minlength='1'
+  maxlength='250'
+  [(ngModel)]='trivia.correct'
+  #correct='ngModel'
+  />
+  <br>
+  <label for="fake1">Fake Answer 1:</label>
+  <input type="text" name="fake1"
+  required
+  minlength='1'
+  maxlength='250'
+  [(ngModel)]='trivia.fake1'
+  #fake1='ngModel'
+  />
+  <br>
+  <label for="fake2">Fake Answer 2:</label>
+  <input type="text" name="fake2"
+  required
+  minlength='1'
+  maxlength='250'
+  [(ngModel)]='trivia.fake2'
+  #fake2='ngModel'
+  />
+  <br>
+  <input type="submit" value="Add Question">
+</form>
+<button [routerLink]="['/home']">Cancel</button>

@@ -1,0 +1,44 @@
+<h3>Hello {{username.name}}</h3>
+<p>Choose answer for each of the questions and submit the test once done.</p>
+<p>Good luck!</p>
+<!-- <form>
+  <fieldset *ngFor='let q of alltrivia'>
+    <ng-container>
+    <p>{{q.question}}</p>
+    <input type="radio" name="{{q.correct}}" id="">{{q.correct}}
+    <br>
+    <input type="radio" name="{{q.fake1}}" id="">{{q.fake1}}
+    <br>
+    <input type="radio" name="{{q.fake2}}" id="">{{q.fake2}}
+    </ng-container>
+  </fieldset>
+  <input type="submit" value="Submit">
+</form> -->
+<form>
+  <fieldset>
+    <p>{{game.question1.question}}</p>
+    <input type="radio" name="" id="">{{game.question1.correct}}
+    <br>
+    <input type="radio" name="" id="">{{game.question1.fake1}}
+    <br>
+    <input type="radio" name="" id="">{{game.question1.fake2}}
+  </fieldset>
+  <fieldset>
+    <p>{{game.question2.question}}</p>
+    <input type="radio" name="" id="">{{game.question2.correct}}
+    <br>
+    <input type="radio" name="" id="">{{game.question2.fake1}}
+    <br>
+    <input type="radio" name="" id="">{{game.question2.fake2}}
+  </fieldset>
+  <fieldset>
+    <p>{{game.question3.question}}</p>
+    <input type="radio" name="" id="">{{game.question3.correct}}
+    <br>
+    <input type="radio" name="" id="">{{game.question3.fake1}}
+    <br>
+    <input type="radio" name="" id="">{{game.question3.fake2}}
+  </fieldset>
+  <input type="submit" value="Submit">
+</form>
+<button [routerLink]="['/home']">Cancel</button>
