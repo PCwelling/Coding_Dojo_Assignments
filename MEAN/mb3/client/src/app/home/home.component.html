@@ -1,0 +1,30 @@
+<h5> <a href="">Logout</a></h5> 
+<br>
+<h3>Hello, {{username.name}}!</h3>
+<p>Here is a list of your friends:</p>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Action</td>
+  </tr>
+  <tr>
+    <td>name: </td>
+    <td> <a href="">View Profile</a> | <a (click)='removeFriend(user._id, idx)'href="">Remove as Friend</a> </td>
+  </tr>
+</table>
+<br>
+<br>
+<p>Other Users not on your friends list:</p>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Action</td>
+  </tr>
+  <tr *ngFor='let user of allusers; let i = index'>
+    <ng-container *ngIf='user._id != username._id'>
+    <td> <a [routerLink]="['user',user._id]" href="">{{user._id}} {{user.name}}</a> </td>
+    <td><button (click)='addFriend(user._id, idx)'>Add as Friend</button></td>
+    <td><button (click)='deleteFriend(user._id, index)'>Delete</button></td>
+    </ng-container>
+  </tr>
+</table>

@@ -1,0 +1,20 @@
+{
+  "name": "mb3",
+  "version": "1.0.0",
+  "description": "3rd attempt at a mean belt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul C Welling",
+  "license": "ISC",
+  "dependencies": {
+    "@angular-devkit/core": "0.0.29",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "fs": "0.0.1-security",
+    "mongoose": "^5.0.2",
+    "path": "^0.12.7"
+  }
+}
