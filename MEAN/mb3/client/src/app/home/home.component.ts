@@ -12,12 +12,14 @@ export class HomeComponent implements OnInit {
   username: Object;
   allusers: Array<any>;
   user: Object;
+  allfriends: Array<any>
 
   constructor(private _dataService:DataService, private _router:Router) { 
     
     this.username = {name: ''};
     this.allusers = [];
     this.user = {name: ''};
+    this.allfriends = [];
 
   }
 
@@ -42,7 +44,12 @@ export class HomeComponent implements OnInit {
     })
   }
   removeFriend(id, idx){
-    //console.log('what the duce')
+    console.log(id)
+    this._dataService.removeFriend(id,(data)=>{
+      if(data){
+        console.log('friend removed')
+      }
+    })
   }
 
   deleteFriend(id, idx){
@@ -54,6 +61,7 @@ export class HomeComponent implements OnInit {
      }
     })
   }
+
 
   ngOnInit() {
     this.checkSession();

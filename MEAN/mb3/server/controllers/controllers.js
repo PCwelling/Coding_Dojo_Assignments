@@ -12,10 +12,12 @@ module.exports = {
                     res.json({user: user})
                 })
             }else{
-                req.session.user = users[0];
-                req.session.save()
-                res.json({user: users[0]})
-            }
+                User.findOne({name: req.body.name}).populate({path: '_friends'}).exec(function(err, user){
+                req.session.user = user;
+                req.session.save();
+                res.json({user: req.session.user});
+                })
+            }    
         })
     },
 
@@ -41,7 +43,7 @@ module.exports = {
         //console.log(req.session.user)
         //console.log('user id',req.session.user._id)
         //console.log('passed params',req.params.id)
-        User.findOneAndUpdate({_id: req.session.user._id},{$set:{_friends: req.params.id}},function(err, user){
+        User.findOneAndUpdate({_id: req.session.user._id},{$push:{_friends: req.params.id}},function(err, user){
             user.save(function(err){
                 //console.log('friends',req.session.user._friends)
                 //console.log('user',user)
@@ -61,9 +63,19 @@ module.exports = {
         User.findOne({id: req.params.id}, function(err, user){
             res.json(user)
         })
-    }
+    },
+
+    removeFriend: function(req, res){
+        // User.findOne({_id: req.session.user._id}, function(err, user){
+        //     console.log('before',user)
+        // })
 
 
-
-
+        User.update({_id: req.session.user._id}, {$pull: {_friends: req.params.id}}, function(err){
+            User.findOne({_id: req.session.user._id}, function(err, user){
+                //console.log('after',user)
+                res.json(user)
+            })
+        })
+    },
 }

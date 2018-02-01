@@ -1,0 +1,143 @@
+FULL MEAN:
+
+cd ../Full
+mkdir <project>
+cd <project>
+npm init -y
+npm install express express-session body-parser fs path mongoose --save
+copy nul server.js
+mkdir server
+cd server
+mkdir config controllers models
+cd config
+copy nul mongoose.js 
+copy nul routes.js
+cd ../..
+code . 
+nodemon server.js
+____________________________________________________________________________
+server.js:
+
+const express = require("express"),
+  app = express(),
+  path = require("path"),
+  bP = require("body-parser"),
+  port = 8000,
+  session = require("express-session");
+
+app.use(express.static(path.join(__dirname, "/client/dist")));
+app.use(bP.json());
+app.use(session({secret:<STRING>, saveUninitialized: true}));
+
+//comment out until mongoose & routes files are built else error
+//require("./server/config/mongoose.js");
+//require("./server/config/routes.js")(app); //importing app and running it immediately
+
+app.listen(port, function(){
+	console.log("listening");
+})
+______________________________________________________________________________
+in new CMD( @ .../PROJECT/client):
+
+ng new client --routing
+npm install -g --save @angular-devkit/core
+npm install --save @angular-devkit/core
+ng build -w
+
+______________________________________________________________________________
+in app.module:
+
+import { FormsModule } from '@angular/forms';
+
+import { HttpModule } from '@angular/http';
+
+imports: [
+  BrowserModule,
+    FormsModule,
+    HttpModule
+, AppRoutingModule ],
+______________________________________________________________________________
+in app.html:
+Clear and set up html for project
+______________________________________________________________________________
+in new CMD(@.../PROJECT/client):
+ng g c login
+ng g s interlink
+
+_______________________________________________________________________________
+add content to component html then component.ts file.
+_______________________________________________________________________________
+set up service. (make sure everything is being imported and connected)
+_______________________________________________________________________________
+set up app.routing.module in Angular:
+add routes and import needed modules
+_______________________________________________________________________________
+connect service to Backend:
+
+routes.js:
+
+var <X> = require('../controllers/<X>Controller.js');
+module.exports = function(app){
+	//routing
+	//app.get('/', function(req,res){
+		//instructions
+	})
+}
+_______________________________________________________________________________
+<X>controller.js
+
+
+var mongoose = require("mongoose"),
+  <X>= mongoose.model('X');
+module.exports = {
+  //index:function(req,res){
+    //User.find({}, function(err,y){
+      //res.json(y)
+    //})
+  //},
+  //read:function(req,res){
+    //User.find({name:req.params.name}, function(err, y){
+      //res.json(y)
+    //})
+  //},
+  //create:function(req,res){
+    //User.create({name: req.params.name}, function(err, y){ //include spaces
+      //res.redirect('/')
+    //})
+  //},
+  //update:function(req,res){
+    //User.edit({name:req.params.name},function(err, y){ //edit function might be incorrect
+      //res.redirect('/')
+  //}
+  //destroy:function(req,res){
+    //User.remove({name:req.params.name}, function(err, y){
+      //res.redirect('/')
+    //})
+  //}
+}
+__________________________________________________________
+Models:
+
+var mongoose = require("mongoose"),
+  Schema = mongoose.Schema,
+  <X>Schema = new Schema({
+    name: String
+  })
+mongoose.model('<X>', <X>Schema);
+__________________________________________________________
+mongoose:
+
+let mongoose = require("mongoose"),
+  path = require("path"),
+  fs = require("fs"), //file system, allows us to read or write files
+  mp = path.join(__dirname, './../models'); //mp = models path
+
+mongoose.connect('mongodb://localhost/'dbname); //put outside the ' to flag it as needing to be changed, make sure to put actual name in '
+
+fs.readdirSync(mp).forEach(function(file){
+  if(file.indexOf('.js') >= 0){
+    require(mp + '/' + file)
+  }
+})
+___________________________________________________________
+for every function/callback built, stop and test. Console.log as you go. 

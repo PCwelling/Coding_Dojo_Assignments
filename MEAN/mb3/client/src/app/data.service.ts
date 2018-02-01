@@ -14,15 +14,15 @@ export class DataService {
     })
   }
 
-  checkSession(callback){
+  checkSession(cb){
     this._http.get('/session').subscribe((res)=>{
-      callback(res.json());
+    cb(res.json());
     })
   }
 
-  showUsers(user,callback){
+  showUsers(user,cb){
     this._http.get('/showuser', user).subscribe((res)=>{
-      callback(res.json());
+      cb(res.json());
       return res.json();
     })
   }
@@ -39,14 +39,17 @@ export class DataService {
     })
   }
 
-  showProfile(params, cb){
-    this._http.get('/showprofile', params).subscribe((res)=>{
-      cb(res.json)
+  showProfile(id,cb){
+    this._http.get('/showprofile/'+id).subscribe((res)=>{
+      cb(res.json())
+    })
+  }
+
+  removeFriend(id, cb){
+    this._http.get('/removefriend/'+id).subscribe((res)=>{
+      cb(res.json())
     })
   }
 
 
-
-
-  //////////////////
 }

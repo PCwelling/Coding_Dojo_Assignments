@@ -7,10 +7,10 @@
     <td>Name</td>
     <td>Action</td>
   </tr>
-  <tr>
-    <td>name: </td>
-    <td> <a href="">View Profile</a> | <a (click)='removeFriend(user._id, idx)'href="">Remove as Friend</a> </td>
-  </tr>
+    <tr *ngFor='let friend of username._friends'>
+      <td>{{friend.name}}</td>
+      <td> <a [routerLink]="['friend',friend._id]" href="">View Profile</a> | <a (click)='removeFriend(friend._id, idx)'href="">Remove as Friend</a> </td>
+    </tr>
 </table>
 <br>
 <br>
@@ -21,10 +21,12 @@
     <td>Action</td>
   </tr>
   <tr *ngFor='let user of allusers; let i = index'>
-    <ng-container *ngIf='user._id != username._id'>
-    <td> <a [routerLink]="['user',user._id]" href="">{{user._id}} {{user.name}}</a> </td>
-    <td><button (click)='addFriend(user._id, idx)'>Add as Friend</button></td>
-    <td><button (click)='deleteFriend(user._id, index)'>Delete</button></td>
+    <ng-container *ngIf='user._id != username._id; '>
+      <!-- <ng-container *ngIf='friend.name != user.name'> -->
+        <td> <a [routerLink]="['user',user._id]" href="">{{user.name}}</a> </td>
+        <td><button (click)='addFriend(user._id, idx)'>Add as Friend</button></td>
+        <!-- <td><button (click)='deleteFriend(user._id, index)'>Delete</button></td> -->
+      <!-- </ng-container>  -->
     </ng-container>
   </tr>
 </table>

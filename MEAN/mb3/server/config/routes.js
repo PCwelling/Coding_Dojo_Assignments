@@ -27,8 +27,11 @@ module.exports = function(app){
         user.deleteFriend(req,res)
     })
 
-    app.get('/showprofile', function(req, res){
+    app.get('/showprofile/:id', function(req, res){
         user.showProfile(req, res)
+    })
+    app.get('/removefriend/:id', function(req, res){
+        user.removeFriend(req, res)
     })
     
 
