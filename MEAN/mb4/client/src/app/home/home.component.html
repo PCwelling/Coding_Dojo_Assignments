@@ -1,3 +1,22 @@
-<h4><a href="">Home</a> | <a href="">Logout</a></h4> 
+<h4><a [routerLink]="['/newpoll']" href="">Create a New Poll</a> | <a href="">Logout</a></h4> 
 <br>
 <h3>Welcome, {{username.name}}!</h3>
+<h3>Current Polls:</h3>
+<input type="search" name="" id="">
+<br>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Survey Question</td>
+        <td>Date Posted</td>
+        <td>Action</td>
+    </tr>
+    <tr *ngFor='let poll of allpolls'>
+        <td>{{poll._creator}}</td>
+        <td><a [routerLink]="['poll',poll._id]" href="">{{poll.question}}</a></td>
+        <td>{{poll.createdAt | date:'longDate'}}</td>
+        <td *ngIf="poll._creator">
+            <button (click)='deletePoll(poll._id)'>Delete</button>
+        </td>
+    </tr>
+</table>

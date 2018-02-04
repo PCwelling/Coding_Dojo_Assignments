@@ -9,11 +9,13 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  username: object;
+  username: Object;
+  allpolls: Array<any>
 
   constructor(private _dataService:DataService, private _router:Router) { 
 
     this.username = {name: ''};
+    this.allpolls = []
 
   }
 
@@ -25,10 +27,27 @@ export class HomeComponent implements OnInit {
       }
     })
   }
+  
+  allPolls(){
+    this._dataService.allPolls(this.allpolls, (data)=>{
+      this.allpolls = data
+    })
+  }
+  deletePoll(id){
+    this._dataService.deletePoll(id, ()=>{
+        for(let poll in this.allpolls){
+          if(id == this.allpolls[poll]._id){
+            this.allpolls.splice(parseInt(poll))
+          }
+        }
+    })
+  }
+
 
 
   ngOnInit() {
     this.checkSession();
+    this.allPolls();
 
   }
 

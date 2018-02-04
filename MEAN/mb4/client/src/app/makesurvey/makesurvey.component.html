@@ -1,0 +1,52 @@
+<a [routerLink]="['/home']" href="">Cancel</a>
+
+<h3>Put the Question and options here:</h3>
+
+<form (submit)='newSurvey()'>
+  <label for="question">Question</label>
+  <input type="text" name="question"
+  required
+  minlength="8"
+  maxlength="250"
+  [(ngModel)]="survey.question"
+  #question='ngModel'
+  />
+  <br>
+  <label for="option1">Option 1:</label>
+  <input type="text" name="option1"
+  required
+  minlength='3'
+  maxlength='75'
+  [(ngModel)]='survey.option1'
+  #option1='ngModel'
+  />
+  <br>
+  <label for="option2">Option 2:</label>
+  <input type="text" name="option2"
+  required
+  minlength='3'
+  maxlength='75'
+  [(ngModel)]='survey.option2'
+  #option2='ngModel'
+  />
+  <br>
+  <label for="option3">Option 3:</label>
+  <input type="text" name="option3"
+  required
+  nimlength='3'
+  maxlength='75'
+  [(ngModel)]='survey.option3'
+  #option3='ngModel'
+  />
+  <br>
+  <label for="option4">Option 4:</label>
+  <input type="text" name="option4"
+  required
+  minlength='3'
+  maxlength='75'
+  [(ngModel)]='survey.option4'
+  #option4='ngModel'
+  />
+  <br>
+  <input type="submit" value="Create Poll">
+</form>

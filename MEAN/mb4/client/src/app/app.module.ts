@@ -9,13 +9,17 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { DataService } from './data.service';
+import { MakesurveyComponent } from './makesurvey/makesurvey.component';
+import { ViewsurveyComponent } from './viewsurvey/viewsurvey.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    MakesurveyComponent,
+    ViewsurveyComponent
   ],
   imports: [
     BrowserModule,

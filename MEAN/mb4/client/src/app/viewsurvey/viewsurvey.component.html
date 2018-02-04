@@ -1,0 +1,16 @@
+<a [routerLink]="['/home']" href="">Go to Polls</a>
+
+<h3>Question:</h3>
+<p>Click the Vote button to choose one</p>
+<table>
+  <tr>
+    <td>Option</td>
+    <td>Current Count of Votes</td>
+    <td>Action</td>
+  </tr>
+  <tr *ngFor='let item of poll'>
+    <td>{{item.option1}}</td>
+    <td>likes</td>
+    <td><button>Vote</button></td>
+  </tr>
+</table>
