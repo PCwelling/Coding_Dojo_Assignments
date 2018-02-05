@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/Fundamentals1/bin/Debug/netcoreapp2.0/Fundamentals1.deps.json
+/Users/paulcwelling/DojoAss/netCore/Fundamentals1/bin/Debug/netcoreapp2.0/Fundamentals1.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/Fundamentals1/bin/Debug/netcoreapp2.0/Fundamentals1.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/Fundamentals1/bin/Debug/netcoreapp2.0/Fundamentals1.dll
+/Users/paulcwelling/DojoAss/netCore/Fundamentals1/bin/Debug/netcoreapp2.0/Fundamentals1.pdb
+/Users/paulcwelling/DojoAss/netCore/Fundamentals1/obj/Debug/netcoreapp2.0/Fundamentals1.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/Fundamentals1/obj/Debug/netcoreapp2.0/Fundamentals1.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/Fundamentals1/obj/Debug/netcoreapp2.0/Fundamentals1.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/Fundamentals1/obj/Debug/netcoreapp2.0/Fundamentals1.dll
+/Users/paulcwelling/DojoAss/netCore/Fundamentals1/obj/Debug/netcoreapp2.0/Fundamentals1.pdb
