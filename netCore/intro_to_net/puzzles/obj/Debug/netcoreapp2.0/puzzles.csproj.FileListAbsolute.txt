@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/puzzles/obj/Debug/netcoreapp2.0/puzzles.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/puzzles/obj/Debug/netcoreapp2.0/puzzles.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/puzzles/obj/Debug/netcoreapp2.0/puzzles.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/puzzles/bin/Debug/netcoreapp2.0/puzzles.deps.json
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/puzzles/bin/Debug/netcoreapp2.0/puzzles.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/puzzles/bin/Debug/netcoreapp2.0/puzzles.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/puzzles/bin/Debug/netcoreapp2.0/puzzles.dll
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/puzzles/bin/Debug/netcoreapp2.0/puzzles.pdb
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/puzzles/obj/Debug/netcoreapp2.0/puzzles.dll
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/puzzles/obj/Debug/netcoreapp2.0/puzzles.pdb
