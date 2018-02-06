@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/basic13/obj/Debug/netcoreapp2.0/basic13.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/basic13/obj/Debug/netcoreapp2.0/basic13.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/basic13/obj/Debug/netcoreapp2.0/basic13.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/basic13/bin/Debug/netcoreapp2.0/basic13.deps.json
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/basic13/bin/Debug/netcoreapp2.0/basic13.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/basic13/bin/Debug/netcoreapp2.0/basic13.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/basic13/bin/Debug/netcoreapp2.0/basic13.dll
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/basic13/bin/Debug/netcoreapp2.0/basic13.pdb
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/basic13/obj/Debug/netcoreapp2.0/basic13.dll
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/basic13/obj/Debug/netcoreapp2.0/basic13.pdb

@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/box_unbox/obj/Debug/netcoreapp2.0/box_unbox.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/box_unbox/obj/Debug/netcoreapp2.0/box_unbox.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/box_unbox/obj/Debug/netcoreapp2.0/box_unbox.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/box_unbox/bin/Debug/netcoreapp2.0/box_unbox.deps.json
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/box_unbox/bin/Debug/netcoreapp2.0/box_unbox.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/box_unbox/bin/Debug/netcoreapp2.0/box_unbox.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/box_unbox/bin/Debug/netcoreapp2.0/box_unbox.dll
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/box_unbox/bin/Debug/netcoreapp2.0/box_unbox.pdb
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/box_unbox/obj/Debug/netcoreapp2.0/box_unbox.dll
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/box_unbox/obj/Debug/netcoreapp2.0/box_unbox.pdb
