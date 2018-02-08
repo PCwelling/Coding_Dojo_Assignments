@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace player
+namespace cards
 {
     public class Player
     {
@@ -9,7 +9,7 @@ namespace player
         public string name;
 
         //// a list of cards 
-        public List<card> hand;
+        public List<Card> hand;
 
         public Player(string person)
         {
@@ -36,6 +36,7 @@ namespace player
                 Card res = hand[idx];
                 hand.RemoveAt(idx);
                 return res;
+            }
         }
     }
 }

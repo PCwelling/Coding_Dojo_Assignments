@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace card
+namespace cards
 {
     public class Card
     {
@@ -14,11 +14,11 @@ namespace card
         ////holds the integer value of the card
         public int val;
 
-        public void Card(string name, int suitname, int value)
+        public Card(string n, string sn, int v)
         {
-            stringVal = name;
-            suit = suitname;
-            val = value;
+            stringVal = n;
+            suit = sn;
+            val = v;
         }
         
     }

@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/cards/obj/Debug/netcoreapp2.0/cards.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/cards/obj/Debug/netcoreapp2.0/cards.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/cards/obj/Debug/netcoreapp2.0/cards.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/cards/bin/Debug/netcoreapp2.0/cards.deps.json
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/cards/bin/Debug/netcoreapp2.0/cards.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/cards/bin/Debug/netcoreapp2.0/cards.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/cards/bin/Debug/netcoreapp2.0/cards.dll
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/cards/bin/Debug/netcoreapp2.0/cards.pdb
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/cards/obj/Debug/netcoreapp2.0/cards.dll
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/cards/obj/Debug/netcoreapp2.0/cards.pdb
