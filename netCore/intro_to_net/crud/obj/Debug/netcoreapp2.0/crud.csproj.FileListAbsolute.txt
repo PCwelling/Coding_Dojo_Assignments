@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/crud/obj/Debug/netcoreapp2.0/crud.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/crud/obj/Debug/netcoreapp2.0/crud.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/crud/obj/Debug/netcoreapp2.0/crud.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/crud/bin/Debug/netcoreapp2.0/crud.deps.json
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/crud/bin/Debug/netcoreapp2.0/crud.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/crud/bin/Debug/netcoreapp2.0/crud.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/crud/bin/Debug/netcoreapp2.0/crud.dll
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/crud/bin/Debug/netcoreapp2.0/crud.pdb
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/crud/obj/Debug/netcoreapp2.0/crud.dll
+/Users/paulcwelling/DojoAss/netCore/intro_to_net/crud/obj/Debug/netcoreapp2.0/crud.pdb

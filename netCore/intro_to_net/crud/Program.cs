@@ -7,10 +7,6 @@ namespace crud
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-
             // string InputLine = Console.ReadLine();
 
             //Placed inside the code block where you want to query the database
@@ -18,6 +14,28 @@ namespace crud
 
             //or
             // DbConnector.Execute("Some query with no expected return");
+
+
+           // DbConnector.Query("select * from User")
+
+
+        public List<string> Display()
+        {
+            DbConnector.Query("SELECT * FROM User")
+
+        }
+
+        public void Insert()
+        {
+            string InputLine = Console.ReadLine();
+            DbConnector.Execute("INSERT INTO User(FirstName, LastName, FavoriteNumber) VALUES("John", "Smith", "45")");
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+            Insert();
+
 
 
         }

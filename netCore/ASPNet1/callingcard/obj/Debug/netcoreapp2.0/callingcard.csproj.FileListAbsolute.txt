@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/callingcard/bin/Debug/netcoreapp2.0/callingcard.deps.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/callingcard/bin/Debug/netcoreapp2.0/callingcard.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/callingcard/bin/Debug/netcoreapp2.0/callingcard.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/callingcard/bin/Debug/netcoreapp2.0/callingcard.dll
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/callingcard/bin/Debug/netcoreapp2.0/callingcard.pdb
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/callingcard/obj/Debug/netcoreapp2.0/callingcard.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/callingcard/obj/Debug/netcoreapp2.0/callingcard.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/callingcard/obj/Debug/netcoreapp2.0/callingcard.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/callingcard/obj/Debug/netcoreapp2.0/callingcard.dll
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/callingcard/obj/Debug/netcoreapp2.0/callingcard.pdb
