@@ -12541,11 +12541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/paulcwelling/DojoAss/netCore/ASPNet1/callingcard/callingcard.csproj",
-      "projectName": "callingcard",
-      "projectPath": "/Users/paulcwelling/DojoAss/netCore/ASPNet1/callingcard/callingcard.csproj",
+      "projectUniqueName": "/Users/paulcwelling/DojoAss/netCore/ASPNet1/timeDisplay/timeDisplay.csproj",
+      "projectName": "timeDisplay",
+      "projectPath": "/Users/paulcwelling/DojoAss/netCore/ASPNet1/timeDisplay/timeDisplay.csproj",
       "packagesPath": "/Users/paulcwelling/.nuget/packages/",
-      "outputPath": "/Users/paulcwelling/DojoAss/netCore/ASPNet1/callingcard/obj/",
+      "outputPath": "/Users/paulcwelling/DojoAss/netCore/ASPNet1/timeDisplay/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

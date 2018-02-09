@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/timeDisplay/bin/Debug/netcoreapp2.0/timeDisplay.deps.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/timeDisplay/bin/Debug/netcoreapp2.0/timeDisplay.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/timeDisplay/bin/Debug/netcoreapp2.0/timeDisplay.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/timeDisplay/bin/Debug/netcoreapp2.0/timeDisplay.dll
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/timeDisplay/bin/Debug/netcoreapp2.0/timeDisplay.pdb
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/timeDisplay/obj/Debug/netcoreapp2.0/timeDisplay.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/timeDisplay/obj/Debug/netcoreapp2.0/timeDisplay.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/timeDisplay/obj/Debug/netcoreapp2.0/timeDisplay.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/timeDisplay/obj/Debug/netcoreapp2.0/timeDisplay.dll
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/timeDisplay/obj/Debug/netcoreapp2.0/timeDisplay.pdb
