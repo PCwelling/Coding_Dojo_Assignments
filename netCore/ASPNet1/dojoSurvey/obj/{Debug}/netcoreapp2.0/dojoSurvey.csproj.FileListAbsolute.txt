@@ -1,0 +1,2 @@
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/dojoSurvey/obj/{Debug}/netcoreapp2.0/dojoSurvey.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/dojoSurvey/obj/{Debug}/netcoreapp2.0/dojoSurvey.AssemblyInfoInputs.cache

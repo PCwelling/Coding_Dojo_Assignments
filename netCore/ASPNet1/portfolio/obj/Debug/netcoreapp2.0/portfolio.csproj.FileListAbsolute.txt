@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/portfolio/obj/Debug/netcoreapp2.0/portfolio.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/portfolio/obj/Debug/netcoreapp2.0/portfolio.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/portfolio/obj/Debug/netcoreapp2.0/portfolio.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/portfolio/bin/Debug/netcoreapp2.0/portfolio.deps.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/portfolio/bin/Debug/netcoreapp2.0/portfolio.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/portfolio/bin/Debug/netcoreapp2.0/portfolio.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/portfolio/bin/Debug/netcoreapp2.0/portfolio.dll
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/portfolio/bin/Debug/netcoreapp2.0/portfolio.pdb
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/portfolio/obj/Debug/netcoreapp2.0/portfolio.dll
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/portfolio/obj/Debug/netcoreapp2.0/portfolio.pdb
