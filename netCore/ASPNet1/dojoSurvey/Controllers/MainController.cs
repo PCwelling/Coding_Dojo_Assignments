@@ -10,20 +10,15 @@ namespace YourNamespace.Controllers
         {
             return View();
         }
-        // [HttpGet]
-        // [Route("result")]
-        // public IActionResult Result()
-        // {
-        //     return View();
-        // }
-        
-        // [HttpGet]
+
         [HttpPost]
         [Route("process")]
         public IActionResult Process(string name, string location, string language, string comment)
         {
-            System.Console.WriteLine("i'm here");
-            ViewBag.Dojosurvey = new {name = name, location = location, language = language, comment = comment};
+            ViewBag.name  =  name;
+            ViewBag.location = location;
+            ViewBag.language = language;
+            ViewBag.comment = comment;
             return View("result");
         }
 

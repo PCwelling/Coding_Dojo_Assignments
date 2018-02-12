@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/randpass/bin/Debug/netcoreapp2.0/randpass.deps.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/randpass/bin/Debug/netcoreapp2.0/randpass.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/randpass/bin/Debug/netcoreapp2.0/randpass.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/randpass/bin/Debug/netcoreapp2.0/randpass.dll
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/randpass/bin/Debug/netcoreapp2.0/randpass.pdb
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/randpass/obj/Debug/netcoreapp2.0/randpass.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/randpass/obj/Debug/netcoreapp2.0/randpass.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/randpass/obj/Debug/netcoreapp2.0/randpass.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/randpass/obj/Debug/netcoreapp2.0/randpass.dll
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/randpass/obj/Debug/netcoreapp2.0/randpass.pdb

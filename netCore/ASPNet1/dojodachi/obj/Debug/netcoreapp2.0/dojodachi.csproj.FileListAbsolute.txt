@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/dojodachi/bin/Debug/netcoreapp2.0/dojodachi.deps.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/dojodachi/bin/Debug/netcoreapp2.0/dojodachi.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/dojodachi/bin/Debug/netcoreapp2.0/dojodachi.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/dojodachi/bin/Debug/netcoreapp2.0/dojodachi.dll
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/dojodachi/bin/Debug/netcoreapp2.0/dojodachi.pdb
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/dojodachi/obj/Debug/netcoreapp2.0/dojodachi.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/dojodachi/obj/Debug/netcoreapp2.0/dojodachi.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/dojodachi/obj/Debug/netcoreapp2.0/dojodachi.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/dojodachi/obj/Debug/netcoreapp2.0/dojodachi.dll
+/Users/paulcwelling/DojoAss/netCore/ASPNet1/dojodachi/obj/Debug/netcoreapp2.0/dojodachi.pdb

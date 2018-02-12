@@ -6,16 +6,13 @@
         <link rel="stylesheet" href="~/css/style.css"/>
     </head>
     <body>
-        <h1>Hello, please fill out the form</h1>
+        <h1>Hello, here are the form results:</h1>
         <fieldset>
             <h3>Submitted Info:</h3>
-            @{
-                object LocalObject = ViewBag.Dojosurvey;
-            }
-            <p>Name: @ViewBag.Dojosurvey</p>
-            <p> Dojo Location:</p>
-            <p>Favorite Language:</p>
-            <p>Comment: </p>
+            <p>Name: @ViewBag.name</p>
+            <p> Dojo Location: @ViewBag.location</p>
+            <p>Favorite Language: @ViewBag.language</p>
+            <p>Comment: @ViewBag.comment</p>
         </fieldset>
     </body>
 </html>
