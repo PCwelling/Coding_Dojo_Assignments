@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/FormSub/bin/Debug/netcoreapp2.0/FormSub.deps.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/FormSub/bin/Debug/netcoreapp2.0/FormSub.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/FormSub/bin/Debug/netcoreapp2.0/FormSub.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/FormSub/bin/Debug/netcoreapp2.0/FormSub.dll
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/FormSub/bin/Debug/netcoreapp2.0/FormSub.pdb
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/FormSub/obj/Debug/netcoreapp2.0/FormSub.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/FormSub/obj/Debug/netcoreapp2.0/FormSub.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/FormSub/obj/Debug/netcoreapp2.0/FormSub.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/FormSub/obj/Debug/netcoreapp2.0/FormSub.dll
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/FormSub/obj/Debug/netcoreapp2.0/FormSub.pdb
