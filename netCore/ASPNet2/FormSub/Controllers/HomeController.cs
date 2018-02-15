@@ -13,6 +13,7 @@ namespace FormSub.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.errors = new List<string>();
             return View();
         }
 
@@ -28,14 +29,19 @@ namespace FormSub.Controllers
                 email = email,
                 password = password,
             };
-            TryValidateModel(NewUser);
-            ViewBag.errors = ModelState.Values;
-            return RedirectToAction("Registered");
+            TryValidateModel(NewUser); // Runs our validations
+            if(ModelState.IsValid){
+                return View("Success");
+            } else {
+                ViewBag.errors = ModelState.Values;
+                return View("Index");
+            }
+            
         }
 
         [HttpGet]
-        [Route("registered")]
-        public IActionResult Reqistered()
+        [Route("success")]
+        public IActionResult Success()
         {
             return View();
         }

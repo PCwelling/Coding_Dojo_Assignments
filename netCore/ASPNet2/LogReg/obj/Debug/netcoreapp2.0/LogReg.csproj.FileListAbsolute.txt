@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/LogReg/bin/Debug/netcoreapp2.0/LogReg.deps.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/LogReg/bin/Debug/netcoreapp2.0/LogReg.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/LogReg/bin/Debug/netcoreapp2.0/LogReg.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/LogReg/bin/Debug/netcoreapp2.0/LogReg.dll
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/LogReg/bin/Debug/netcoreapp2.0/LogReg.pdb
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/LogReg/obj/Debug/netcoreapp2.0/LogReg.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/LogReg/obj/Debug/netcoreapp2.0/LogReg.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/LogReg/obj/Debug/netcoreapp2.0/LogReg.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/LogReg/obj/Debug/netcoreapp2.0/LogReg.dll
+/Users/paulcwelling/DojoAss/netCore/ASPNet2/LogReg/obj/Debug/netcoreapp2.0/LogReg.pdb

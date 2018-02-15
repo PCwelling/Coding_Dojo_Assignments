@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div>
+    @foreach(var error in ViewBag.errors)
+    {
+        //If there are any errors for a field...
+        if(@error.Errors.Count > 0)
+        {
+            // We show the first error for that field
+            <p>@error.Errors[0].ErrorMessage</p>
+        }
+    }
+</div>
+<h3>Enter your information to register</h3>
+<br>
+<fieldset>
+    <form action="register" method="post">
+        <p>
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" id="">
+        </p>
+        <p>
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lname" id="">
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="">
+        </p>
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="">
+        </p>
+        <p>
+            <label for="passwordconfirm">Confirm Password:</label>
+            <input type="password" name="passwordconfirm" id="">
+        </p>
+        <button type="submit">Submit</button>
+    </form>
+</fieldset>
+<br>
+<h3>Login here if you are already registered</h3>
+<fieldset>
+    <form action="login" method="post">
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="">
+            <p>@ViewBag.usererror</p>
+        </p>
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="">
+            <p>@ViewBag.pwerror</p>
+        </p>
+        <button type="submit">Login</button>
+    </form>
+</fieldset>
