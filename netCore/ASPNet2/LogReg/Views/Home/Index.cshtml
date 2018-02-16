@@ -2,16 +2,19 @@
     ViewData["Title"] = "Home Page";
 }
 <div>
-    @foreach(var error in ViewBag.errors)
-    {
-        //If there are any errors for a field...
-        if(@error.Errors.Count > 0)
+    @{
+        foreach(var error in ViewBag.errors)
         {
-            // We show the first error for that field
-            <p>@error.Errors[0].ErrorMessage</p>
+            <!-- //If there are any errors for a field... -->
+            if(@error.Errors.Count > 0)
+            {
+                <!-- // We show the first error for that field -->
+                <p>@error.Errors[0].ErrorMessage</p>
+            }
         }
     }
 </div>
+    
 <h3>Enter your information to register</h3>
 <br>
 <fieldset>
@@ -46,12 +49,12 @@
         <p>
             <label for="email">Email:</label>
             <input type="email" name="email" id="">
-            <p>@ViewBag.usererror</p>
+            @ViewBag.usererror
         </p>
         <p>
             <label for="password">Password:</label>
             <input type="password" name="password" id="">
-            <p>@ViewBag.pwerror</p>
+            @ViewBag.pwerror
         </p>
         <button type="submit">Login</button>
     </form>

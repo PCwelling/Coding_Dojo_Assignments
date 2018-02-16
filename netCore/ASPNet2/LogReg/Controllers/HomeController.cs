@@ -36,7 +36,6 @@ namespace LogReg.Controllers
                 ViewBag.errors = ModelState.Values;
                 return View("Index");
             }
-            
         }
 
         [HttpGet]
@@ -50,6 +49,7 @@ namespace LogReg.Controllers
         [Route("login")]
         public IActionResult Login(string email, string password)
         {
+            ViewBag.errors = new List<string>();
             List<Dictionary<string,object>> user = DbConnector.Query($"SELECT id, password FROM User WHERE email = '{email}'");
             if(user.Count == 0){
                 ViewBag.usererror = "email not found";
@@ -69,14 +69,12 @@ namespace LogReg.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 

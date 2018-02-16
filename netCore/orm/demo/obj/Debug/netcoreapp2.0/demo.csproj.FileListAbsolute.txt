@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/orm/demo/bin/Debug/netcoreapp2.0/demo.deps.json
+/Users/paulcwelling/DojoAss/netCore/orm/demo/bin/Debug/netcoreapp2.0/demo.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/orm/demo/bin/Debug/netcoreapp2.0/demo.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/orm/demo/bin/Debug/netcoreapp2.0/demo.dll
+/Users/paulcwelling/DojoAss/netCore/orm/demo/bin/Debug/netcoreapp2.0/demo.pdb
+/Users/paulcwelling/DojoAss/netCore/orm/demo/obj/Debug/netcoreapp2.0/demo.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/orm/demo/obj/Debug/netcoreapp2.0/demo.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/orm/demo/obj/Debug/netcoreapp2.0/demo.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/orm/demo/obj/Debug/netcoreapp2.0/demo.dll
+/Users/paulcwelling/DojoAss/netCore/orm/demo/obj/Debug/netcoreapp2.0/demo.pdb
