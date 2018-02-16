@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Teams";
+}
+
+<h1>Current Teams</h1>
+<ul>
+@foreach(var team in ViewBag.allTeams)
+{
+    <li>@team["Name"]</li>
+}
+</ul>
+
+<hr>
+
+<h1>Add a Superhero Team</h1>
+
+<form action="/teams/add" method="POST">
+    <label>Team Name:</label>
+    <input class="form-control" type="text" name="name">
+    <button class="btn btn-success">Add</button>
+</form>

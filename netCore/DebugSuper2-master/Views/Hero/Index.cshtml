@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Heroes";
+}
+
+<h1>Current Heroes</h1>
+<table class="table table-striped">
+    <tr>
+        <th>Real Name</th>
+        <th>Superhero Name</th>
+        <th>Power</th>
+        <th>Team</th>
+        <th>Is Villain</th>
+    </tr>
+@foreach(var hero in ViewBag.allHeroes)
+{
+    <tr>
+        <td>@hero["RealName"]</td>
+        <td>@hero["SuperheroName"]</td>
+        <td>@hero["Power"]</td>
+        <td>@hero["teamname"]</td>
+        <td>@hero["IsVillain"]</td>
+    </tr>
+}
+
+</table>
+
+<hr>
+
+<h1>Add a Superhero</h1>
+
+<form action="/heroes/add" method="post">
+    <label>Real Name:</label>
+    <input type="text" name="realName">
+    
+    <label>Superhero Name:</label>
+    <input type="text" name="superName">
+
+    <label>Power:</label>
+    <input type="text" name="power">
+    
+    <label>Is a Villain:</label>
+    <input type="checkbox" name="villainCheck" value="yes">
+
+    <label>Team:</label>
+    <select name="team">
+        @foreach(var team in ViewBag.allTeams)
+        {
+            <option value="@team["TeamId"]">@team["Name"]</option>
+        }
+    </select>
+    
+    <button class="btn btn-success">Add</button>
+</form>

@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h2>Here are a list of reviews:</h2>
+@foreach(var review in ViewBag.results)
+{
+    <h5>Review for: @review.restaurant</h5>
+    <h5>@review.stars stars</h5>
+    <h6>Reviewer: @review.name, @review.date.ToString("MM/dd/yyyy")</h6>
+    <p>@review.review</p>
+    <p>--------------------------------------------------------------</p>
+
+}

@@ -20,12 +20,13 @@ namespace demo.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.errors = new List<string>();           
             return View();
         }
 
         [HttpPost]
-        [RouteReview(leavereview)]
-        public IActionResult leavereview(ReviewViewModel model)
+        [Route("leavereview")]
+        public IActionResult Leavereview(ReviewViewModel model)
         {
             if(ModelState.IsValid){
                 Review NewReview = new Review{
@@ -35,13 +36,26 @@ namespace demo.Controllers
                 review = model.review,
                 date = model.date
                 };
-            _context.Add()NewReview                
+            _context.Add(NewReview);
+            _context.SaveChanges();
+            List<Review> reviewresults=_context.Review.ToList();
+            reviewresults.OrderByDescending(d => d.date);
+            ViewBag.results = reviewresults;
+            return View("AllReviews");              
             }else{
-
+                ViewBag.errors = ModelState.Values;
+                return View("Index");
             }
+        }
 
-        
-
+        [HttpGet]
+        [Route("allreviews")]
+        public IActionResult AllReviews()
+        {
+            List<Review> reviewresults=_context.Review.ToList();
+            reviewresults.OrderByDescending(d => d.date);
+            ViewBag.results = reviewresults;
+            return View();
         }
 
         //////////////////////////////////////////////////////////
