@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/orm/Bank/obj/Debug/netcoreapp2.0/Bank.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/orm/Bank/obj/Debug/netcoreapp2.0/Bank.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/orm/Bank/obj/Debug/netcoreapp2.0/Bank.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/orm/Bank/bin/Debug/netcoreapp2.0/Bank.deps.json
+/Users/paulcwelling/DojoAss/netCore/orm/Bank/bin/Debug/netcoreapp2.0/Bank.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/orm/Bank/bin/Debug/netcoreapp2.0/Bank.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/orm/Bank/bin/Debug/netcoreapp2.0/Bank.dll
+/Users/paulcwelling/DojoAss/netCore/orm/Bank/bin/Debug/netcoreapp2.0/Bank.pdb
+/Users/paulcwelling/DojoAss/netCore/orm/Bank/obj/Debug/netcoreapp2.0/Bank.dll
+/Users/paulcwelling/DojoAss/netCore/orm/Bank/obj/Debug/netcoreapp2.0/Bank.pdb
