@@ -1,0 +1,25 @@
+<h3>Welcome to the Wedding Planner, @ViewBag.UserInfo.fname</h3>
+
+<a href="logout">Log Out</a>
+<br>
+<br>
+<table>
+    <tr>
+        <td>Wedding</td>
+        <td>Date</td>
+        <td>Guest</td>
+        <td>Action</td>
+    </tr>
+    @foreach(var w in ViewBag.allweddings){
+        <tr>
+            <td>@w.WeddingId @w.wedder_1 & @w.wedder_2</td>
+            <td>@w.date</td>
+            <td>number of guests</td>
+            <td>action link</td>
+        </tr>
+    }
+</table>
+<br>
+<br>
+<a href="newwedding"><button>New Wedding</button></a>
+

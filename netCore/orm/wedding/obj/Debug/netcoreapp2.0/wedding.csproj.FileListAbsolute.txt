@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/orm/wedding/obj/Debug/netcoreapp2.0/wedding.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/orm/wedding/obj/Debug/netcoreapp2.0/wedding.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/orm/wedding/obj/Debug/netcoreapp2.0/wedding.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/orm/wedding/bin/Debug/netcoreapp2.0/wedding.deps.json
+/Users/paulcwelling/DojoAss/netCore/orm/wedding/bin/Debug/netcoreapp2.0/wedding.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/orm/wedding/bin/Debug/netcoreapp2.0/wedding.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/orm/wedding/bin/Debug/netcoreapp2.0/wedding.dll
+/Users/paulcwelling/DojoAss/netCore/orm/wedding/bin/Debug/netcoreapp2.0/wedding.pdb
+/Users/paulcwelling/DojoAss/netCore/orm/wedding/obj/Debug/netcoreapp2.0/wedding.dll
+/Users/paulcwelling/DojoAss/netCore/orm/wedding/obj/Debug/netcoreapp2.0/wedding.pdb

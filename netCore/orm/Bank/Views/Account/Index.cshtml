@@ -1,10 +1,11 @@
+@model Bank.Models.Account
 <h3>Welcome, @ViewBag.UserInfo.fname</h3>
 
 <h4>Current balance: @ViewBag.UserInfo.balance</h4>
 
 <form action="transaction" method="post">
-    <label for="amount">Deposit / Withdraw:</label>
-    <input type="number" name="amount" id="">
+    <label asp-for="amount">Deposit / Withdraw:</label>
+    <input type="number" asp-for="amount" id="">@ViewBag.error
     <button type="submit">Submit</button>
 </form>
 <br>
@@ -13,8 +14,10 @@
         <td>Amount</td>
         <td>Date</td>
     </tr>
-    <tr>
-        <td></td>
-        <td></td>
-    </tr>
+    @foreach(var t in ViewBag.results){
+        <tr>
+            <td>@t.amount</td>
+            <td>@t.created_at</td>
+        </tr>
+    }
 </table>

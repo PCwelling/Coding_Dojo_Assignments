@@ -1,0 +1,33 @@
+@model wedding.Models.WeddingViewModel;
+
+<p> <a href="dashboard">Dashboard</a> |<a href="logout">Log Out</a></p>
+<br>
+<h3>Plan Your Wedding</h3>
+<br>
+<br>
+<form action="createwedding" method="post">
+    <p>
+        <label asp-for="wedder_1"></label>
+        <input asp-for="wedder_1">
+        <span asp-validation-for="wedder_1"></span>
+    </p>
+    <p>
+        <label asp-for="wedder_2"></label>
+        <input asp-for="wedder_2">
+        <span asp-validation-for="wedder_2"></span>
+    </p>
+
+    <p>
+        <label asp-for="date"></label>
+        <input type="date" asp-for="date">
+        <span asp-validation-for="date"></span>
+    </p>
+
+    <p>
+        <label asp-for="address"></label>
+        <input asp-for="address">
+        <span asp-validation-for="address"></span>
+    </p>
+
+    <input type="submit" value="Create">
+</form>

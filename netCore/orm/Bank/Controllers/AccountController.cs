@@ -32,17 +32,41 @@ namespace Bank.Controllers
 
             User thisUser = _context.User.Where(u => u.UserId == HttpContext.Session.GetInt32("UserId")).FirstOrDefault();
             ViewBag.UserInfo = thisUser;
+            List<Account>transactions = _context.Account.Where(a => a.UserId == HttpContext.Session.GetInt32("UserId")).ToList();
+            ViewBag.results = transactions;
+            if(TempData["error"] != null){
+                ViewBag.error = TempData["error"];
+            }
 
             return View();
         }
 
         [HttpPost]
         [Route("transaction")]
-        public IActionResult Transaction(int amount)
+        public IActionResult Transaction(Account account)
         {
+            int? id = HttpContext.Session.GetInt32("UserId");
+            int uid = (int)id;
+            Account newTransaction = new Account()
+            {
+                UserId = uid,
+                amount = account.amount
+            };
+            User thisUser = _context.User.Where(u => u.UserId == HttpContext.Session.GetInt32("UserId")).FirstOrDefault();
+            thisUser.balance += account.amount;
+            if(account.amount * -1 > thisUser.balance)
+            {
+                List<Account> transactions = _context.Account.Where(a => a.UserId == HttpContext.Session.GetInt32("UserId")).ToList();
+                ViewBag.results = transactions;
+                TempData["error"] = "Withdraw exceeds balance!";
+            } else {
+            _context.Account.Add(newTransaction);
+            _context.SaveChanges();
+            }
+
             return RedirectToAction("Index");
         }
 
-    ///////////////////////////////////////////////////////////////////////////////////////////    
+        
     }
 }

@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model wedding.Models.RegisterViewModel;
+
+<h3>Register</h3>
+<form  action="Register" method="post">
+    <p>
+        <label asp-for="fname"></label>
+        <input asp-for="fname">
+        <span asp-validation-for="fname"></span>
+    </p>
+    <p>
+        <label asp-for="lname"></label>
+        <input asp-for="lname">
+        <span asp-validation-for="lname"></span>
+    </p>
+    <p>
+        <label asp-for="email"></label>
+        <input asp-for="email">
+        <span asp-validation-for="email"></span>
+    </p>
+    <p>
+        <label asp-for="password"></label>
+        <input asp-for="password">
+        <span asp-validation-for="password"></span>
+    </p>
+    <p>
+        <label asp-for="pwconfirm"></label>
+        <input asp-for="pwconfirm">
+        <span asp-validation-for="pwconfirm"></span>
+    </p>
+    <a asp-action="Tologin">Already Registered?</a>
+    <button type="submit">Submit</button>
+</form>
