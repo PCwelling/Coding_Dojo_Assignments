@@ -9,6 +9,8 @@ namespace BeltExam.Models
         public Context(DbContextOptions<Context> options) : base(options) { }
 
     public DbSet<User> User {get; set;}
+    public DbSet<Activity> Activity {get; set;}
+    public DbSet<UserActivity> UserActivity {get; set;}
 
     }
 }

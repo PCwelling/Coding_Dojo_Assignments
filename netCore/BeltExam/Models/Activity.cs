@@ -5,24 +5,30 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BeltExam.Models
 {
-    public class User: BaseEntity
+    public class Activity: BaseEntity
     {
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public int UserId {get; set;}
+        public int ActivityId {get; set;}
 
-        public string fname {get; set;}
+        public string title {get; set;}
 
-        public string lname {get; set;}
+        public DateTime date {get; set;}
 
-        public string email {get; set;}
+        public DateTime time {get; set;}
      
-        public string password {get; set;}
+        public int duration {get; set;}
+
+        public int coordinator {get; set;}
+
+        public string durationlength {get; set;}
+
+        public string desc {get; set;}
 
         public List<UserActivity> UserActivity {get; set;}
 
-        public User()
+        public Activity()
         {
             UserActivity = new List<UserActivity>();
         }

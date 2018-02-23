@@ -1,3 +1,54 @@
 <h3>Welcome, @ViewBag.UserInfo.fname</h3>
-
-<a href="/logout">Log Out</a>
+<br>
+<a href="/logout">Log Off</a>
+<br>
+<br>
+<table>
+    <tr>
+        <td>Activity</td>
+        <td>Date and Time</td>
+        <td>Duration</td>
+        <td>Event Coordinator</td>
+        <td>Number of Participants</td>
+        <td>Actions</td>
+    </tr>
+    @model List<BeltExam.Models.Activity>
+        @foreach(var e in Model){
+            <tr>
+                <td> <a href="showactivity/@e.ActivityId">@e.title</a></td>
+                <td>@e.date.ToString("MM/dd") -  @e.time.ToString("hh:mm tt")</td>
+                <td>@e.duration @e.durationlength</td>
+                <td>@e.coordinator</td>
+                <td>@e.UserActivity.Count</td>
+                @if( e.coordinator == ViewBag.UserInfo.UserId){
+                    <td>
+                        <form action="delete" method="POST">
+                            <input type="hidden" name="ActivityId" value="@e.ActivityId">
+                            <button type="submit" name="delete">Delete</button>
+                        </form>
+                    </td>
+                }else{
+                    if(e.UserActivity.Where(u => u.UserId == ViewBag.UserInfo.UserId).SingleOrDefault() == null)
+                    {
+                        <td>
+                            <form action="join" method="POST">
+                                    <input type="hidden" name="ActivityId" value="@e.ActivityId">
+                                    <button type="submit" name="join">Join</button>                               
+                            </form>
+                        </td>
+                    }else{
+                        <td>
+                            <form action="leave" method="POST">
+                                <input type="hidden" name="ActivityId" value="@e.ActivityId">
+                                <button type="submit" name="leave">Leave</button>
+                            </form>
+                        </td>                      
+                    }
+                }
+                
+                
+            </tr>
+        }
+</table>
+<br>
+<a href="/new"><button>Add New Activity</button></a>

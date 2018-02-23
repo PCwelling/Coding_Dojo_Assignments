@@ -1,0 +1,20 @@
+<p><a href="/dashboard">Home</a> | <a href="/logout">Log Off</a></p>
+<h1>@ViewBag.showevent.title</h1>
+<br>
+<td>
+    <form action="join" method="POST">
+        <input type="hidden" name="ActivityId" value="@ViewBag.showevent.ActivityId">
+        <button type="submit" name="join">Join</button>                               
+    </form>
+</td>
+<br>
+<h3>Event Coordinator: @ViewBag.showevent.coordinator</h3>
+<br>
+<h4>Description:</h4>
+<p>@ViewBag.showevent.desc</p>
+<br>
+<br>
+<h4>Participants:</h4>
+@foreach(var p in ViewBag.showevent.UserActivity){
+  <p>@p.User.fname</p>  
+}

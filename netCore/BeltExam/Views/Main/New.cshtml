@@ -1,0 +1,38 @@
+@model BeltExam.Models.ActivityViewModel;
+
+<p><a href="/dashboard">Home</a> | <a href="/logout">Log Off</a></p>
+<br>
+<h2>Create an Activity!</h2>
+<form action="create" method="post">
+    <p>
+        <label asp-for="title"></label>
+        <input asp-for="title">
+        <span asp-validation-for="title"></span>
+    </p>
+    <p>
+        <label asp-for="time"></label>
+        <input type="time" asp-for="time">
+        <span asp-validation-for="time"></span>
+    </p>
+    <p>
+        <label asp-for="date"></label>
+        <input type="date" asp-for="date">
+        <span asp-validation-for="date"></span>
+    </p>
+    <p>
+        <label asp-for="duration"></label>
+        <input type="number" asp-for="duration">
+        <select asp-for="durationlength" name="durationlength" id="">
+            <option value="days">Days</option>
+            <option value="hours">Hours</option>
+           <option value="minutes">Minutes</option>
+        </select>
+        <span asp-validation-for="duration"></span>
+    </p>
+    <p>
+        <label asp-for="desc"></label>
+        <textarea asp-for="desc" cols="20" rows="5"></textarea>
+        <span asp-validation-for="desc"></span>
+    </p>
+    <button type="submit">Create Activity</button>
+</form>
