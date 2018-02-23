@@ -20,6 +20,14 @@ namespace wedding.Models
         
         public string address {get; set;}
         
-        public int created_by {get; set;}   
+        public int created_by {get; set;}
+
+        public List<UserWedding> UserWedding {get; set;}
+
+        public Wedding()
+        {
+            UserWedding = new List<UserWedding>();
+        }
+
     }
 }

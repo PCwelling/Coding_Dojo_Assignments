@@ -1,3 +1,4 @@
+using System;
 using Microsoft.EntityFrameworkCore;
  
 namespace wedding.Models
@@ -9,5 +10,6 @@ namespace wedding.Models
 
     public DbSet<User> User {get; set;}
     public DbSet<Wedding> Wedding {get; set;}
+    public DbSet<UserWedding> UserWedding {get; set;}
     }
 }

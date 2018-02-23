@@ -19,6 +19,13 @@ namespace wedding.Models
         public string email {get; set;}
      
         public string password {get; set;}
+
+        public List<UserWedding> UserWedding { get; set; }
+
+        public User()
+        {
+            UserWedding = new List<UserWedding>();
+        }
        
     }
 }

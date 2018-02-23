@@ -10,14 +10,40 @@
         <td>Guest</td>
         <td>Action</td>
     </tr>
-    @foreach(var w in ViewBag.allweddings){
-        <tr>
-            <td>@w.WeddingId @w.wedder_1 & @w.wedder_2</td>
-            <td>@w.date</td>
-            <td>number of guests</td>
-            <td>action link</td>
-        </tr>
-    }
+    @model List<wedding.Models.Wedding>
+        @foreach(var w in Model){
+            <tr>
+                <td><a href="showwedding/@w.WeddingId">@w.wedder_1 & @w.wedder_2</a></td>
+                <td>@w.date.ToString("MMMM d yyyy")</td>
+                <td>@w.UserWedding.Count</td>
+                @if(w.created_by == ViewBag.UserInfo.UserId){
+                        <td>
+                            <form action="delete" method="POST">
+                                <input type="hidden" name="WeddingId" value="@w.WeddingId">
+                                <button type="submit" name="delete">Delete</button>
+                            </form>
+                        </td>
+                }
+                    else{
+                        if(w.UserWedding.Where(u => u.UserId == ViewBag.UserInfo.UserId).SingleOrDefault() == null)
+                        {
+                            <td>
+                                <form action="rsvp" method="POST">
+                                    <input type="hidden" name="WeddingId" value="@w.WeddingId">
+                                    <button type="submit" name="rsvp">RSVP</button>
+                                </form>
+                            </td>
+                        } else { 
+                                <td>
+                                    <form action="unrsvp" method="POST">
+                                        <input type="hidden" name="WeddingId" value="@w.WeddingId">
+                                        <button type="submit" name="rsvpid">Un-RSVP</button>
+                                    </form>
+                                </td>                   
+                                }
+                    } 
+            </tr>
+        }
 </table>
 <br>
 <br>

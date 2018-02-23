@@ -8,13 +8,13 @@ namespace wedding.Models
         [Required]
         [MinLength(2)]
         [Display(Name = "Wedder One")]
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = " Wedder 1 can only contain letters")]
+        [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = " Wedder One can only contain letters")]
         public string wedder_1 { get; set; }
 
         [Required]
         [MinLength(2)]
         [Display(Name = "Wedder Two")]        
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Wedder 2 can only contain letters")]      
+        [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "Wedder Two can only contain letters")]      
         public string wedder_2 {get; set;}
 
         [Required]
