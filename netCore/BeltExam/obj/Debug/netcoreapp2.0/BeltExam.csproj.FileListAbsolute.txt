@@ -1,0 +1,10 @@
+/Users/paulcwelling/DojoAss/netCore/BeltExam/obj/Debug/netcoreapp2.0/BeltExam.csproj.CoreCompileInputs.cache
+/Users/paulcwelling/DojoAss/netCore/BeltExam/obj/Debug/netcoreapp2.0/BeltExam.AssemblyInfoInputs.cache
+/Users/paulcwelling/DojoAss/netCore/BeltExam/obj/Debug/netcoreapp2.0/BeltExam.AssemblyInfo.cs
+/Users/paulcwelling/DojoAss/netCore/BeltExam/bin/Debug/netcoreapp2.0/BeltExam.deps.json
+/Users/paulcwelling/DojoAss/netCore/BeltExam/bin/Debug/netcoreapp2.0/BeltExam.runtimeconfig.json
+/Users/paulcwelling/DojoAss/netCore/BeltExam/bin/Debug/netcoreapp2.0/BeltExam.runtimeconfig.dev.json
+/Users/paulcwelling/DojoAss/netCore/BeltExam/bin/Debug/netcoreapp2.0/BeltExam.dll
+/Users/paulcwelling/DojoAss/netCore/BeltExam/bin/Debug/netcoreapp2.0/BeltExam.pdb
+/Users/paulcwelling/DojoAss/netCore/BeltExam/obj/Debug/netcoreapp2.0/BeltExam.dll
+/Users/paulcwelling/DojoAss/netCore/BeltExam/obj/Debug/netcoreapp2.0/BeltExam.pdb

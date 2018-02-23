@@ -1,0 +1,18 @@
+<h3>Login</h3>
+<br>
+<fieldset>
+    <form action="login" method="post">
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="">
+            @ViewBag.usererror
+        </p>
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="">
+            @ViewBag.pwerror
+        </p>
+        <a asp-action="Index">Need to Register?</a>
+        <button type="submit">Login</button>
+    </form>
+</fieldset>
