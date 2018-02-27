@@ -4,8 +4,9 @@ var Schema = mongoose.Schema;
 //// User Schema ////
 var UserSchema = new Schema({
     name: String,
+    _list: [{type: Schema.Types.ObjectId, ref: "List"}]
 },
-{timestamps: true});
+{timestamps: true, usePushEach: true});
 
 mongoose.model('User', UserSchema);
 
@@ -13,10 +14,10 @@ mongoose.model('User', UserSchema);
 var ListSchema = new Schema({
     title: String,
     desc: String,
-    tagged: String,
-    _poster: [{types: Schema.Types.ObjectId,}],
+    creator: Object,
+    _user: [{type: Schema.Types.ObjectId, ref: "User"}],
     status: {type: Boolean, default: false}
 },
-{timestamps: true});
+{timestamps: true, usePushEach: true});
 
 mongoose.model('List', ListSchema);

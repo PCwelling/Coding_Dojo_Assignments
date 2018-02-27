@@ -18,7 +18,7 @@
   [(ngModel)]="list.desc"
   #desc='ngModel'
   />
-  <select name="tagged" [(ngModel)]='tagged'>
+  <select name="tagged" [(ngModel)]="tagged">
     <ng-container *ngFor='let user of allusers'>
       <option *ngIf='user._id != username._id'value="">{{user.name}}</option>
     </ng-container>  

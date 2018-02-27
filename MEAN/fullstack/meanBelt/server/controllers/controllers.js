@@ -33,8 +33,12 @@ module.exports = {
     },
 
     newItem: function(req,res){
-        List.create({title: req.body.title, desc: req.body.desc, tagged: req.body.tagged , _poster: req.session.user_id }, function(err, list){
+        User.findOne({name:req.session.user.name}, function(err,user){
+            List.create({title: req.body.title, desc: req.body.desc, _user: req.body.users , creator: user.name, status: false}, function(err, list){
+            user.list.push((list._id));
+            user.save();
             res.json({list: list});
+            });
         });
     },
 
